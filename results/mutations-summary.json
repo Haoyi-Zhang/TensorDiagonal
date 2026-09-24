@@ -1,0 +1,8 @@
+{
+  "cpu_seconds": 0.007251162999999949,
+  "failures": 0,
+  "instances": 10,
+  "peak_rss_kib": 95532,
+  "rejected": 10,
+  "wall_seconds": 0.007469570000012027
+}

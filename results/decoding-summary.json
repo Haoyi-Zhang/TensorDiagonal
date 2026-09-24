@@ -1,0 +1,9 @@
+{
+  "budget_checks": 1566,
+  "cpu_seconds": 0.448981352,
+  "failures": 0,
+  "normalization_cases": 1,
+  "peak_rss_kib": 95532,
+  "wall_seconds": 0.4492435749998549,
+  "words": 270
+}

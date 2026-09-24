@@ -1,0 +1,112 @@
+{
+    "field": "exact rational inputs; mathematical conclusions over the real numbers",
+    "orbit_order": "lexicographic combinations with replacement of zero-based coordinates",
+    "exhaustive": [
+        {
+            "n": 3,
+            "mixed_alphabet": [
+                -1,
+                0,
+                1
+            ],
+            "free_mixed_orbits": 7,
+            "instances": 2187
+        },
+        {
+            "n": 3,
+            "pair_alphabet": [
+                -2,
+                -1,
+                0,
+                1,
+                2
+            ],
+            "distinct_triple": 0,
+            "free_mixed_orbits": 6,
+            "instances": 15625
+        },
+        {
+            "n": 4,
+            "mixed_alphabet": [
+                0,
+                1
+            ],
+            "free_mixed_orbits": 16,
+            "instances": 65536,
+            "coverage": "complete Cartesian enumeration of all mixed symmetric orbits"
+        }
+    ],
+    "distance_realizations": {
+        "n_min": 1,
+        "n_max": 8,
+        "distances": "all integers 1 through n"
+    },
+    "cauchy_family": {
+        "n_min": 2,
+        "n_max": 8,
+        "nodes": "0 through n-1",
+        "directions": [
+            "all ones",
+            "(-1)^i (i+1)"
+        ],
+        "parameters": [
+            0,
+            1,
+            2
+        ]
+    },
+    "generic_rigid_witnesses": {
+        "n_min": 3,
+        "n_max": 12,
+        "orthogonal_factors": "rational Householder matrix from vector (1,...,n)",
+        "weights": "1,2,4,...,2^(n-1)",
+        "obligation": "every all-distinct entry nonzero; exact mixed fiber unique",
+        "interpretation": "deterministic mechanism witnesses, not evidence for the almost-sure theorem"
+    },
+    "noise": {
+        "dimension_budget_pairs": [
+            [
+                3,
+                1
+            ],
+            [
+                5,
+                1
+            ],
+            [
+                7,
+                2
+            ]
+        ],
+        "noise_exponents": [
+            10,
+            14,
+            18
+        ],
+        "amplitudes": [
+            1,
+            1024,
+            1048576,
+            1099511627776
+        ],
+        "seed": "907+n",
+        "entry_numerators": [
+            -2,
+            -1,
+            0,
+            1,
+            2
+        ],
+        "support": "first s coordinates"
+    },
+    "negative_controls": [
+        "distance 2 with budget 1",
+        "noise upper bound exceeding certified margin"
+    ],
+    "resource_limits": {
+        "workers": 1,
+        "implementation_max_n": 16,
+        "implementation_max_supports": 2048
+    },
+    "interpretation": "Finite algebraic validation and deliberately constructed stress cases, not application workload breadth or a statistical test set."
+}

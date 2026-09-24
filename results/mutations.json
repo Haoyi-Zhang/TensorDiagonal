@@ -1,0 +1,42 @@
+[
+  {
+    "case": "altered-particular",
+    "rejected": true
+  },
+  {
+    "case": "truncated-direction",
+    "rejected": true
+  },
+  {
+    "case": "false-full-rank",
+    "rejected": true
+  },
+  {
+    "case": "invalid-equation",
+    "rejected": true
+  },
+  {
+    "case": "invalid-rational",
+    "rejected": true
+  },
+  {
+    "case": "false-inconsistency-sum",
+    "rejected": true
+  },
+  {
+    "case": "altered-inverse",
+    "rejected": true
+  },
+  {
+    "case": "omitted-support",
+    "rejected": true
+  },
+  {
+    "case": "inflated-margin",
+    "rejected": true
+  },
+  {
+    "case": "negative-noise",
+    "rejected": true
+  }
+]

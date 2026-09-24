@@ -1,0 +1,73 @@
+\documentclass[11pt,twoside]{article}
+\usepackage[preprint]{jmlr2e}
+\usepackage{amsmath,mathtools,booktabs,array}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows.meta,positioning,fit}
+\pgfplotsset{compat=1.18}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\spanof}{\operatorname{span}}
+\newcommand{\odeco}{\mathcal O_n}
+\newcommand{\calF}{\mathcal F}
+\newcommand{\calC}{\mathcal C}
+\newcommand{\calS}{\mathcal S}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\one}{\mathbf 1}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\hypersetup{
+  pdftitle={Diagonal Completion: Proofs and Certificates},
+  pdfauthor={Haoyi Zhang and Huaijin Ran},
+  pdfsubject={Proof supplement and exact certificate semantics for diagonal completion of orthogonal tensors},
+  pdfkeywords={orthogonal tensors, diagonal completion, exact certificates, identifiability}
+}
+\ShortHeadings{Diagonal Completion: Proofs and Certificates}{Zhang and Ran}
+\firstpageno{1}
+
+\begin{document}
+\title{Diagonal Completion: Proofs and Certificates}
+\author{\name Haoyi Zhang \email hyeliozhang@gmail.com \\
+\addr Xi'an Jiaotong-Liverpool University
+\AND
+\name Huaijin Ran \email huaijin003@e.ntu.edu.sg \\
+\addr Nanyang Technological University}
+\maketitle
+This standalone supplement contains the model, complete mathematical arguments,
+worked certificates, and representation semantics. The computational checks in
+this repository are finite validation, not machine-checked proofs of these general statements.
+The observation basis is fixed and the class is the union of real orthogonal ranks.  In addition to the exact all-input fiber, the supplement proves the low-dimensional obstruction and the probability-one rigidity threshold for continuous odeco parameters.
+
+\paragraph{Literature map.}
+The factor-uniqueness background comes from CP identifiability and the algebraic
+characterization of orthogonally decomposable tensors
+\citep{bhaskara2014,boralevi2017,robeva2016,koiran2021}.
+The moment-method lineage and its perturbation questions are represented by
+\citet{anandkumar2014}, the block-sparse analysis of \citet{anandkumar2016},
+and later orthogonal-tensor perturbation studies
+\citep{luo2021,xia2019,auddy2023,yuan2026}.
+Completion work addresses different masks or quantifiers: algebraic matrix
+completion \citep{kiraly2015}, low-CP-rank completion
+\citep{ashraphijuo2017,haselby2024}, recovery from all-distinct multilinear
+entries \citep{schramm2015}, and low-rank estimation guarantees
+\citep{tongwu2026}. The closest robust odeco comparison treats locally
+correlated additive noise \citep{mickelin2023}, while the finite-source
+interpretation below meets the higher-order factor-analysis setting of
+\citet{ardiyansyah2023}. These references provide context; the proofs below
+establish the fixed-basis diagonal-completion statements used by the checker.
+
+\input{sections/model}
+\input{sections/affine}
+\input{sections/graph}
+\input{sections/cauchy}
+\input{sections/stability}
+\input{references}
+\appendix
+\input{sections/appendix}
+\end{document}

@@ -1,0 +1,99 @@
+\section{The observation model and identifiable parameters}\label{sec:model}
+\subsection{Tensors, slices, and a fixed coordinate basis}
+Throughout, $n\geq1$ and the base field for the mathematical statements is $\R$. A tensor $T\in\Sym^3(\R^n)$ is a real array invariant under all permutations of its indices. Its $i$th slice is the real symmetric matrix $T_i$ with $(T_i)_{pq}=T_{ipq}$. We use the Frobenius norm on the full array, counting all ordered entries, and the Euclidean norm on vectors. In particular, a two-equal-index orbit has multiplicity three and an all-distinct orbit has multiplicity six.
+
+Define the coordinate-diagonal embedding and mixed projection by
+\begin{equation}\label{eq:diagonal}
+ D(x)=\sum_{i=1}^n x_i e_i^{\otimes3},\qquad
+ P_{\rm mix}T=T-D((T_{111},\ldots,T_{nnn})^\top).
+\end{equation}
+The word ``mixed'' includes $T_{iij}$ and $T_{ijj}$ when $i\ne j$. It does not mean that all three indices must be distinct. This distinction matters: those two-equal-index entries carry the edges of our graph.
+
+\begin{definition}[Orthogonal model]\label{def:odeco}
+The class $\odeco$ consists of tensors
+\begin{equation}\label{eq:odeco}
+ T=\sum_{a=1}^r\lambda_a u_a^{\otimes3},\qquad
+ u_a^\top u_b=\one_{a=b},\quad \lambda_a\ne0,\quad 0\le r\le n.
+\end{equation}
+The empty sum is the zero tensor. The model does not fix $r$. By changing the sign of $u_a$, every nonzero weight can be oriented positive.
+\end{definition}
+For a mixed tensor $H=P_{\rm mix}H$, the completion fiber is
+\begin{equation}\label{eq:fiber-def}
+ \calF(H)=\{x\in\R^n:H+D(x)\in\odeco\}.
+\end{equation}
+We distinguish the vector fiber from its tensor image, which is an isometric affine embedding whenever the fiber is affine. The tensor rank of a member need not be constant over that fiber.
+
+In the exact corruption model we observe $(H,d)$, with
+\begin{equation}\label{eq:exact-model}
+ T^*=H+D(x^*)\in\odeco,\qquad d=x^*+e.
+\end{equation}
+An allowed support family $\calS$ means that $\supp(e)$ is contained in some $S\in\calS$. The values on that support are arbitrary real numbers. The cardinality model uses $\calS_s=\{S\subseteq[n]:|S|\le s\}$. This is a deterministic model: no probability of a corruption location or sign is assumed.
+
+\subsection{A finite independent-source interpretation}
+One source of~\eqref{eq:exact-model} is the third moment of
+\begin{equation}\label{eq:latent}
+ X=US+\varepsilon,
+\end{equation}
+where $U\in\R^{n\times r}$ has orthonormal columns, the coordinates of $S$ are independent and centered, and $\varepsilon$ has independent centered coordinates and is independent of $S$. Suppose third moments exist. Expanding $\mathbb E[X_iX_jX_k]$, every mixed term containing independent centered factors vanishes. Thus
+\begin{equation}\label{eq:moment}
+ \mathbb E[X^{\otimes3}]
+ =\sum_{a=1}^r \mathbb E[S_a^3]u_a^{\otimes3}
+   +D\big((\mathbb E[\varepsilon_i^3])_{i=1}^n\big).
+\end{equation}
+At order three, centered moments equal cumulants. The diagonal-noise cumulant model is already part of higher-order factor analysis \citep{ardiyansyah2023}; our additional restriction is orthogonality in the observed basis.
+
+This model can have a finite latent state space. If $B$ is Bernoulli with success probability $p\in(0,1)$, then
+\begin{equation}\label{eq:bernoulli}
+ S=\frac{B-p}{\sqrt{p(1-p)}}
+ \quad\hbox{satisfies}\quad
+ \mathbb E[S]=0,\quad \mathbb E[S^2]=1,\quad
+ \mathbb E[S^3]=\frac{1-2p}{\sqrt{p(1-p)}}.
+\end{equation}
+For any prescribed $\lambda\in\R$, the choice
+\begin{equation}\label{eq:bernoulli-p}
+ p=\frac{1}{2}\left(1-\frac{\lambda}{\sqrt{\lambda^2+4}}\right)
+\end{equation}
+gives third moment $\lambda$. Independent choices for $r$ coordinates produce at most $2^r$ joint latent states. This is not an $r$-state categorical mixture. The algebraic examples below therefore have a finite-source interpretation without providing evidence about measured infrastructure or a particular sensing process.
+
+Orthogonality cannot be introduced for free. A linear change of observations by $W$ maps a diagonal noise tensor to
+\begin{equation}\label{eq:whitening-boundary}
+ D(e)(W,W,W)=\sum_i e_i(W^\top e_i)^{\otimes3},
+\end{equation}
+which is generally not coordinate-diagonal. Whitening a clean second moment can orthogonalize signal factors, but it need not preserve the corruption mask. Consequently, applying our theorem after whitening requires separate evidence that the transformed noise has the assumed support. The familiar moment reduction is a lineage, not a substitute for this observation-model check.
+
+\subsection{A known real spectral characterization}
+The following fact connects the model to equations. We give a proof to make the field and symmetry assumptions explicit. The equivalence is established in the algebraic odeco literature, including Theorem~20 of \citet{koiran2021}.
+
+\begin{lemma}[Commuting slices]\label{lem:commuting}
+For $T\in\Sym^3(\R^n)$, the following are equivalent: $T\in\odeco$; the matrices $T_1,\ldots,T_n$ commute pairwise; the commutative product
+\begin{equation}\label{eq:product}
+ e_i*e_j=\sum_k T_{ijk}e_k
+\end{equation}
+is associative.
+\end{lemma}
+\begin{proof}
+If~\eqref{eq:odeco} holds, then $T_i=\sum_a\lambda_a u_{ia}u_au_a^\top$. These matrices are diagonal in one orthonormal basis, so they commute.
+
+Conversely, commuting real symmetric matrices admit a simultaneous real orthonormal eigenbasis. To see this without a simple-spectrum assumption, decompose into the eigenspaces of $T_1$. Every other $T_i$ preserves these spaces because it commutes with $T_1$. Diagonalize the restriction of $T_2$ in each space, and continue. The resulting orthogonal matrix $U$ diagonalizes every slice. Transforming the last two modes of $T$ by $U$ therefore makes every entry with unequal last two indices zero. Transforming the first mode as well preserves these zeros. The resulting tensor remains symmetric, so an entry with equal last two indices but a different first index must also vanish, by permuting the first and second positions. Only pure diagonal entries remain. Transforming back gives~\eqref{eq:odeco}, after omitting zero terms.
+
+For the final equivalence, the operators of left multiplication by $e_i$ are exactly $T_i$. Associativity implies their commutation. In the other direction, if all left multiplication operators commute, then for any $x,y,z$, commutativity of the product gives
+\[
+ (x*y)*z=L_zL_xy=L_xL_zy=x*(z*y)=x*(y*z).
+\]
+Thus the product is associative. The real positive-definite inner product is essential to the simultaneous orthogonal diagonalization step.
+\end{proof}
+
+\begin{lemma}[What a completed tensor identifies]\label{lem:unique-factors}
+The nonzero orthogonal components of a tensor in $\odeco$ are unique up to permutation and the sign change $(\lambda,u)\mapsto(-\lambda,-u)$. Its ordinary CP rank equals the number $r$ of nonzero components in~\eqref{eq:odeco}.
+\end{lemma}
+\begin{proof}
+The joint eigenvalue signature of $u_a$ across all slices is the vector $\lambda_a u_a\in\R^n$. Two such nonzero signatures cannot agree: equality would make two orthogonal unit vectors parallel. The common zero eigenspace is the orthogonal complement of the nonzero factors. Every nonzero joint eigenspace is consequently one-dimensional and is determined by the slice family. This proves uniqueness without requiring distinct weights.
+
+The mode-one unfolding has the factorization
+\[
+ T_{(1)}=U\diag(\lambda_1,\ldots,\lambda_r)(U\odot U)^\top.
+\]
+The columns $u_a\otimes u_a$ are orthonormal, because their inner products are $(u_a^\top u_b)^2$. Therefore the unfolding has matrix rank $r$. Every CP decomposition with $q$ terms has unfolding rank at most $q$, so $q\ge r$. Equation~\eqref{eq:odeco} supplies $r$ terms and proves equality.
+\end{proof}
+
+This lemma identifies the nonzero orthogonal factors of each completed tensor. It does not imply that two different completions have the same factors. The unobserved diagonal can change both the weights and the factor directions, as the spectral family in Section~\ref{sec:cauchy} shows. A null common eigenspace also has no preferred basis; assigning named latent components there would add information not present in the tensor.

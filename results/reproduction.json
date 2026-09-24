@@ -1,0 +1,340 @@
+{
+  "all_scientific_outputs_identical": true,
+  "checker_report": {
+    "budget_records": 1566,
+    "cpu_seconds": 22.91005529,
+    "decoding_words": 270,
+    "exact_inputs": 83348,
+    "mutation_records": 10,
+    "noisy_certificates": 36,
+    "peak_rss_kib": 120248,
+    "status": "verified",
+    "structured_inputs": 94,
+    "wall_seconds": 22.917218062000074
+  },
+  "clean_campaign": {
+    "decoding": {
+      "budget_checks": 1566,
+      "cpu_seconds": 0.448981352,
+      "failures": 0,
+      "normalization_cases": 1,
+      "peak_rss_kib": 95532,
+      "wall_seconds": 0.4492435749998549,
+      "words": 270
+    },
+    "exhaustive": {
+      "consistent_support_profiles": {
+        "binary4": {
+          "1": 136,
+          "1,1": 36,
+          "1,1,1": 12,
+          "1,1,1,1": 1,
+          "1,1,2": 6,
+          "1,2": 24,
+          "2": 12,
+          "2,2": 3,
+          "rigid": 297
+        },
+        "pair_grid": {
+          "1": 156,
+          "1,1": 24,
+          "1,1,1": 1,
+          "1,2": 48,
+          "2": 192,
+          "3": 48
+        },
+        "ternary": {
+          "1": 24,
+          "1,1": 12,
+          "1,1,1": 1,
+          "1,2": 12,
+          "2": 24,
+          "rigid": 444
+        }
+      },
+      "counts": {
+        "binary4": {
+          "ambiguous": 230,
+          "inconsistent": 65009,
+          "unique": 297
+        },
+        "pair_grid": {
+          "ambiguous": 469,
+          "inconsistent": 15156,
+          "unique": 0
+        },
+        "ternary": {
+          "ambiguous": 73,
+          "inconsistent": 1670,
+          "unique": 444
+        }
+      },
+      "cpu_seconds": 24.501475549,
+      "failures": 0,
+      "instances": 83348,
+      "maximum_completion_coefficient_bits": 3,
+      "peak_rss_kib": 95408,
+      "wall_seconds": 24.517628611999953
+    },
+    "mutations": {
+      "cpu_seconds": 0.007251162999999949,
+      "failures": 0,
+      "instances": 10,
+      "peak_rss_kib": 95532,
+      "rejected": 10,
+      "wall_seconds": 0.007469570000012027
+    },
+    "noise": {
+      "cpu_seconds": 5.439519871,
+      "failures": 0,
+      "instances": 36,
+      "negative_controls": 2,
+      "peak_rss_kib": 106672,
+      "same_as_unit_amplitude": 36,
+      "verified": 36,
+      "wall_seconds": 5.443154529999902
+    },
+    "structured": {
+      "additional_ambiguous_case": 1,
+      "cauchy_cases": 42,
+      "cpu_seconds": 3.920468926,
+      "distance_cases": 36,
+      "failures": 0,
+      "generic_rigid_witnesses": 10,
+      "instances": 94,
+      "peak_rss_kib": 97332,
+      "rigid_cases": 5,
+      "wall_seconds": 3.9244881140000416
+    }
+  },
+  "code_integrity": {
+    "assertion_nodes": 32,
+    "optimized_mode_regression_in_unit_tests": true,
+    "optimized_mode_rejected_before_suite_execution": true,
+    "python_source_files_ast_parsed": 9,
+    "subprocess_use": "sequential suite isolation and optimized-mode regression only",
+    "syntax_errors": 0,
+    "third_party_runtime_imports": 0
+  },
+  "commands": [
+    {
+      "command": [
+        "env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "fresh standalone repository",
+      "exit_code": 0,
+      "max_rss_kib": 100776,
+      "name": "tests",
+      "result": "21 tests passed",
+      "system_cpu_seconds": 0.37,
+      "user_cpu_seconds": 4.3,
+      "wall_seconds": 3.96
+    },
+    {
+      "command": [
+        "env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "python",
+        "run.py",
+        "--suite",
+        "all",
+        "--out",
+        "results"
+      ],
+      "cwd": "fresh standalone repository",
+      "exit_code": 0,
+      "max_rss_kib": 106672,
+      "name": "campaign",
+      "result": "all five suites completed sequentially in isolated interpreters with zero recorded failures",
+      "system_cpu_seconds": 0.69,
+      "user_cpu_seconds": 39.95,
+      "wall_seconds": 38.36
+    },
+    {
+      "command": [
+        "env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "python",
+        "check.py",
+        "--results",
+        "results"
+      ],
+      "cwd": "fresh standalone repository",
+      "exit_code": 0,
+      "max_rss_kib": 120248,
+      "name": "checker",
+      "result": "status verified; 83,348 exact, 94 structured, 36 noisy, 270 decoding, 1,566 budget, 10 mutation records",
+      "system_cpu_seconds": 0.13,
+      "user_cpu_seconds": 23.81,
+      "wall_seconds": 23.58
+    },
+    {
+      "command": [
+        "env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "python",
+        "export_figures.py",
+        "--results",
+        "results",
+        "--out",
+        "results/plot-data"
+      ],
+      "cwd": "fresh standalone repository",
+      "exit_code": 0,
+      "max_rss_kib": 92716,
+      "name": "figures",
+      "result": "plot data regenerated",
+      "system_cpu_seconds": 0.11,
+      "user_cpu_seconds": 0.94,
+      "wall_seconds": 0.64
+    }
+  ],
+  "comparison_rule": "JSON timing/memory fields cpu_seconds, wall_seconds, and peak_rss_kib are excluded; all other JSON content and all non-JSON bytes are compared exactly.",
+  "date": "2026-09-16",
+  "documented_clean_command_cpu_seconds": 70.3,
+  "documented_clean_command_wall_seconds": 66.53999999999999,
+  "exact_result_comparison": [
+    {
+      "result": "decoding-summary.json",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "decoding.json",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "exhaustive-summary.json",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "exhaustive.jsonl",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "mutations-summary.json",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "mutations.json",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "negative-controls.json",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "noise-certificates.json",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "noise-summary.json",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "noise.csv",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "plot-data/noise-3.dat",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "plot-data/noise-5.dat",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "plot-data/noise-7.dat",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "plot-data/noise-table.tex",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "structured-summary.json",
+      "scientific_content_identical": true
+    },
+    {
+      "result": "structured.json",
+      "scientific_content_identical": true
+    }
+  ],
+  "final_typesetting": {
+    "all_fonts_embedded_and_subset": true,
+    "article_bytes": 365689,
+    "article_log": {
+      "fatal_errors": 0,
+      "labels_may_have_changed": false,
+      "overfull_boxes": 0,
+      "undefined_references_or_citations": 0,
+      "underfull_warning_occurrences": 21
+    },
+    "article_pages": 35,
+    "article_pages_visually_inspected": 35,
+    "final_200_dpi_renderings_pixel_identical_to_inspected_versions": true,
+    "final_render_page_counts": {
+      "article": 35,
+      "proof_supplement": 30
+    },
+    "ghostscript_full_parse": true,
+    "preflight": {
+      "article_openable": true,
+      "encrypted": false,
+      "likely_scanned": false,
+      "proof_supplement_openable": true,
+      "xfa_present": false
+    },
+    "proof_supplement_bytes": 343486,
+    "proof_supplement_log": {
+      "fatal_errors": 0,
+      "labels_may_have_changed": false,
+      "overfull_boxes": 0,
+      "undefined_references_or_citations": 0,
+      "underfull_warning_occurrences": 24
+    },
+    "proof_supplement_pages": 30,
+    "proof_supplement_pages_visually_inspected": 30,
+    "render_dpi": 200,
+    "visual_defects_found_after_final_repair": 0
+  },
+  "interpretation": "Successful deterministic finite reproduction and exact scientific-output agreement. The exact witnesses exercise theorem mechanisms but do not replace the general proofs. This is an internal self-check, not independent human review or proof-assistant verification.",
+  "method": "clean extraction of the candidate standalone repository ZIP; exact README commands; one suite process at a time; no network, external data, parallel worker pool, or parent-directory imports",
+  "post_packaging_exact_readme_recheck": {
+    "checker_status": "verified",
+    "commands_used_exactly_as_documented": true,
+    "exact_inputs": 83348,
+    "noisy_certificates": 36,
+    "note": "All four README commands succeeded from a clean extraction; the 16 regenerated scientific files matched the saved files after timing-field exclusion. The final archive differs only by the refreshed audit/state records that describe this run.",
+    "scientific_content_identical": true,
+    "scientific_files_compared": 16,
+    "source": "candidate final standalone ZIP extraction",
+    "structured_inputs": 94,
+    "unit_tests_passed": 21
+  },
+  "reference_integrity": {
+    "article_uncited_bibliography_entries": 0,
+    "article_undefined_citations": 0,
+    "article_unique_cited_keys": 64,
+    "article_unique_references": 64,
+    "full_text_model_or_theorem_passage_checks": 19,
+    "primary_metadata_and_abstract_checks": 45,
+    "proof_supplement_references": 17,
+    "proof_supplement_unique_cited_keys": 17,
+    "repairs": "Restored the published Agarwal--Negahban--Wainwright subtitle; corrected the Xia--Yuan DOI; added and inspected Auddy--Yuan (2023).",
+    "row_level_audit": "reference_audit.csv"
+  },
+  "scientific_suite_cpu_seconds": 34.317696861,
+  "status": "passed",
+  "unit_tests": {
+    "count": 21,
+    "status": "passed"
+  }
+}

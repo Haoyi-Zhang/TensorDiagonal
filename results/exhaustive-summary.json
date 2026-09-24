@@ -1,0 +1,54 @@
+{
+  "consistent_support_profiles": {
+    "binary4": {
+      "1": 136,
+      "1,1": 36,
+      "1,1,1": 12,
+      "1,1,1,1": 1,
+      "1,1,2": 6,
+      "1,2": 24,
+      "2": 12,
+      "2,2": 3,
+      "rigid": 297
+    },
+    "pair_grid": {
+      "1": 156,
+      "1,1": 24,
+      "1,1,1": 1,
+      "1,2": 48,
+      "2": 192,
+      "3": 48
+    },
+    "ternary": {
+      "1": 24,
+      "1,1": 12,
+      "1,1,1": 1,
+      "1,2": 12,
+      "2": 24,
+      "rigid": 444
+    }
+  },
+  "counts": {
+    "binary4": {
+      "ambiguous": 230,
+      "inconsistent": 65009,
+      "unique": 297
+    },
+    "pair_grid": {
+      "ambiguous": 469,
+      "inconsistent": 15156,
+      "unique": 0
+    },
+    "ternary": {
+      "ambiguous": 73,
+      "inconsistent": 1670,
+      "unique": 444
+    }
+  },
+  "cpu_seconds": 24.501475549,
+  "failures": 0,
+  "instances": 83348,
+  "maximum_completion_coefficient_bits": 3,
+  "peak_rss_kib": 95408,
+  "wall_seconds": 24.517628611999953
+}

@@ -1,0 +1,5585 @@
+{
+  "cases": [
+    {
+      "case": "word-0-0",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        1,
+        1,
+        1,
+        "infinite"
+      ],
+      "minimum_errors": 0,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-4",
+        "-5/2",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-0-1",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-4",
+        "-5/2",
+        "0"
+      ]
+    },
+    {
+      "case": "word-0-2",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-4",
+        "-5/2",
+        "1"
+      ]
+    },
+    {
+      "case": "word-0-3",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-4",
+        "-3/2",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-0-4",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-4",
+        "-3/2",
+        "0"
+      ]
+    },
+    {
+      "case": "word-0-5",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        3,
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 3,
+      "observed_diagonal": [
+        "-4",
+        "-3/2",
+        "1"
+      ]
+    },
+    {
+      "case": "word-0-6",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-4",
+        "-1/2",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-0-7",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        3,
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 3,
+      "observed_diagonal": [
+        "-4",
+        "-1/2",
+        "0"
+      ]
+    },
+    {
+      "case": "word-0-8",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-4",
+        "-1/2",
+        "1"
+      ]
+    },
+    {
+      "case": "word-0-9",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-3",
+        "-5/2",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-0-10",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-3",
+        "-5/2",
+        "0"
+      ]
+    },
+    {
+      "case": "word-0-11",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        3,
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 3,
+      "observed_diagonal": [
+        "-3",
+        "-5/2",
+        "1"
+      ]
+    },
+    {
+      "case": "word-0-12",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-3",
+        "-3/2",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-0-13",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        1,
+        1,
+        1,
+        "infinite"
+      ],
+      "minimum_errors": 0,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-3",
+        "-3/2",
+        "0"
+      ]
+    },
+    {
+      "case": "word-0-14",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-3",
+        "-3/2",
+        "1"
+      ]
+    },
+    {
+      "case": "word-0-15",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        3,
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 3,
+      "observed_diagonal": [
+        "-3",
+        "-1/2",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-0-16",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-3",
+        "-1/2",
+        "0"
+      ]
+    },
+    {
+      "case": "word-0-17",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-3",
+        "-1/2",
+        "1"
+      ]
+    },
+    {
+      "case": "word-0-18",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-2",
+        "-5/2",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-0-19",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        3,
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 3,
+      "observed_diagonal": [
+        "-2",
+        "-5/2",
+        "0"
+      ]
+    },
+    {
+      "case": "word-0-20",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-2",
+        "-5/2",
+        "1"
+      ]
+    },
+    {
+      "case": "word-0-21",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        3,
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 3,
+      "observed_diagonal": [
+        "-2",
+        "-3/2",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-0-22",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-2",
+        "-3/2",
+        "0"
+      ]
+    },
+    {
+      "case": "word-0-23",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-2",
+        "-3/2",
+        "1"
+      ]
+    },
+    {
+      "case": "word-0-24",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-2",
+        "-1/2",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-0-25",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        1,
+        2,
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-2",
+        "-1/2",
+        "0"
+      ]
+    },
+    {
+      "case": "word-0-26",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        1,
+        1,
+        1,
+        "infinite"
+      ],
+      "minimum_errors": 0,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-2",
+        "-1/2",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-0",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-2",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-1",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-2",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-2",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-2",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-3",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-2",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-4",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-5",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-2",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-6",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-2",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-7",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-2",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-8",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-2",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-9",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-1",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-10",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-11",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-1",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-12",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-1",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-13",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-14",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-15",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-16",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-17",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "-1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-18",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "0",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-19",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "0",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-20",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "0",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-21",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "0",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-22",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-23",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-24",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "0",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-25",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-26",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "-1",
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-27",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-2",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-28",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-2",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-29",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-2",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-30",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-2",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-31",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-32",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-2",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-33",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-2",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-34",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-2",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-35",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-2",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-36",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-1",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-37",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-38",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-1",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-39",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-1",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-40",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-41",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-42",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-43",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-44",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "-1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-45",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "0",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-46",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "0",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-47",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "0",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-48",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-49",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-50",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-51",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "0",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-52",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-53",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "0",
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-54",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-2",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-55",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-2",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-56",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-2",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-57",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-2",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-58",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-59",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-2",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-60",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-2",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-61",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-2",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-62",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-2",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-63",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-1",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-64",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-65",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-1",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-66",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-1",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-67",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-68",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-69",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-70",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-71",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "-1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-72",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "0",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-73",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "0",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-74",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "0",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-75",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "0",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-76",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-77",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-78",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "0",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-79",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-80",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-9/4",
+        "1",
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-81",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-2",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-82",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-2",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-83",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-2",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-84",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-2",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-85",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-86",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-2",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-87",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-2",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-88",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-2",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-89",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-2",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-90",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-1",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-91",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-92",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-1",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-93",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-1",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-94",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-95",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-96",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-97",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-98",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "-1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-99",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "0",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-100",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "0",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-101",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "0",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-102",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "0",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-103",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-104",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-105",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "0",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-106",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-107",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "-1",
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-108",
+      "infinite_at_budget": 1,
+      "list_sizes": [
+        1,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 0,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-2",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-109",
+      "infinite_at_budget": 1,
+      "list_sizes": [
+        1,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 0,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-2",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-110",
+      "infinite_at_budget": 1,
+      "list_sizes": [
+        1,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 0,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-2",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-111",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-2",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-112",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-113",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-2",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-114",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-2",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-115",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-2",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-116",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-2",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-117",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-1",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-118",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-119",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-1",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-120",
+      "infinite_at_budget": 1,
+      "list_sizes": [
+        1,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 0,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-1",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-121",
+      "infinite_at_budget": 1,
+      "list_sizes": [
+        1,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 0,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-122",
+      "infinite_at_budget": 1,
+      "list_sizes": [
+        1,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 0,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-123",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-124",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-125",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "-1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-126",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "0",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-127",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "0",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-128",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "0",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-129",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-130",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-131",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-132",
+      "infinite_at_budget": 1,
+      "list_sizes": [
+        1,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 0,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "0",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-133",
+      "infinite_at_budget": 1,
+      "list_sizes": [
+        1,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 0,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-134",
+      "infinite_at_budget": 1,
+      "list_sizes": [
+        1,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 0,
+      "minimum_list_size": 1,
+      "observed_diagonal": [
+        "-5/4",
+        "0",
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-135",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-2",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-136",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-2",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-137",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-2",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-138",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-2",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-139",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-140",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-2",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-141",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-2",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-142",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-2",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-143",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-2",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-144",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-1",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-145",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-146",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-1",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-147",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-1",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-148",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-149",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-150",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-151",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-152",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "-1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-153",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "0",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-154",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "0",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-155",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "0",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-156",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "0",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-157",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-158",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-159",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "0",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-160",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-161",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-5/4",
+        "1",
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-162",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-2",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-163",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-2",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-164",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-2",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-165",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-2",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-166",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-167",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-2",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-168",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-2",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-169",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-2",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-170",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-2",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-171",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-1",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-172",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-173",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-1",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-174",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-1",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-175",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-176",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-177",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-178",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-179",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "-1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-180",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "0",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-181",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "0",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-182",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "0",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-183",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "0",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-184",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-185",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-186",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "0",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-187",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-188",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "-1",
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-189",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-2",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-190",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-2",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-191",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-2",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-192",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-2",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-193",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-194",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-2",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-195",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-2",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-196",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-2",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-197",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-2",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-198",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-1",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-199",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-200",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-1",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-201",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-1",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-202",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-203",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-204",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-205",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-206",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "-1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-207",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "0",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-208",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "0",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-209",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "0",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-210",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-211",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-212",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-213",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "0",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-214",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-215",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "0",
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-216",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-2",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-217",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-2",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-218",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-2",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-219",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-2",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-220",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-221",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-2",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-222",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-2",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-223",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-2",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-224",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-2",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-225",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-1",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-226",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-227",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-1",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-228",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-1",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-229",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-230",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-231",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-232",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-233",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "-1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-234",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "0",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-235",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "0",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-236",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "0",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-237",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "0",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-238",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-239",
+      "infinite_at_budget": 3,
+      "list_sizes": [
+        0,
+        0,
+        4,
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 2,
+      "minimum_list_size": 4,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "case": "word-1-240",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "0",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "case": "word-1-241",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "case": "word-1-242",
+      "infinite_at_budget": 2,
+      "list_sizes": [
+        0,
+        2,
+        "infinite",
+        "infinite",
+        "infinite",
+        "infinite"
+      ],
+      "minimum_errors": 1,
+      "minimum_list_size": 2,
+      "observed_diagonal": [
+        "-1/4",
+        "1",
+        "0",
+        "1",
+        "1"
+      ]
+    }
+  ],
+  "normalization_ablation": {
+    "direction": [
+      "100",
+      "1",
+      "1"
+    ],
+    "l1_costs": {
+      "1": "100",
+      "2": "2"
+    },
+    "modal_parameter": "1",
+    "ratios": [
+      "2",
+      "1",
+      "1"
+    ],
+    "true_parameter": "1",
+    "unnormalized_l1_parameter": "2"
+  }
+}

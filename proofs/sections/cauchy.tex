@@ -1,0 +1,198 @@
+\section{Which ambiguity components can occur?}\label{sec:cauchy}
+The graph theorem describes the kernel of a linear map for any mixed tensor. It does not yet use consistency. This section shows that a nonempty completion fiber imposes a much stronger internal geometry on each free component. The result also supplies explicit tensors on which the correction threshold is sharp.
+
+\subsection{Associativity forces a clique}
+\begin{lemma}[Internal closure]\label{lem:clique}
+Suppose $\calF(H)\ne\varnothing$. Every free component $C$ is a clique. Moreover, every all-distinct entry involving a vertex of $C$ vanishes.
+\end{lemma}
+\begin{proof}
+A nonzero all-distinct entry pins its three vertices. A free vertex belongs to no such entry, proving the second assertion.
+
+Choose a completion $T$ and use its associative product from Lemma~\ref{lem:commuting}. For distinct $i,j\in C$, all terms with a third different index vanish, so
+\begin{equation}\label{eq:two-product}
+ e_i*e_j=a_{ij}e_i+a_{ji}e_j.
+\end{equation}
+For three distinct vertices $i,j,k\in C$, equate the $e_i$ coefficients in $(e_i*e_j)*e_k=e_i*(e_j*e_k)$. This gives
+\begin{equation}\label{eq:associativity-clique}
+ a_{ij}a_{ik}=a_{ij}a_{jk}+a_{ik}a_{kj}.
+\end{equation}
+If $i,j$ and $j,k$ are edges, then $a_{ij}a_{jk}\ne0$. Were $a_{ik}=0$, equation~\eqref{eq:associativity-clique} would give a contradiction. The kernel relation on a free component has nonzero coordinates, so $a_{ik}\ne0$ also implies $a_{ki}\ne0$. Thus every two-edge path is completed by an edge. Repeatedly shortening a path shows that any two vertices in a connected free component are adjacent.
+\end{proof}
+
+The restriction to a consistent fiber is necessary. Balanced graphs with a non-clique component can be formed algebraically from chosen pair entries, but their constant commutator equations have no solution. A kernel calculation alone would incorrectly regard such a graph as a realizable tensor ambiguity.
+
+\begin{theorem}[Cauchy form of a free component]\label{thm:cauchy-form}
+Suppose $\calF(H)\ne\varnothing$ and let $C$ be a free component with at least two vertices. Choose any kernel direction $z$ supported exactly on $C$. There are pairwise distinct real numbers $(t_i)_{i\in C}$ such that
+\begin{equation}\label{eq:cauchy-form}
+ a_{ij}=\frac{1}{z_j(t_j-t_i)}\qquad(i,j\in C,\ i\ne j).
+\end{equation}
+For fixed $z$, the nodes are determined up to a common translation. Rescaling $z$ by $c\ne0$ rescales all node differences by $c^{-1}$.
+\end{theorem}
+\begin{proof}
+All $a_{ij}$ inside $C$ are nonzero by Lemma~\ref{lem:clique}. The pair kernel equations imply
+\begin{equation}\label{eq:reverse-pair}
+ a_{ji}=-\frac{z_j}{z_i}a_{ij}.
+\end{equation}
+Define $d_{ij}=1/(z_ja_{ij})$. Equation~\eqref{eq:reverse-pair} gives $d_{ji}=-d_{ij}$. Substituting $a_{kj}=-(z_k/z_j)a_{jk}$ into~\eqref{eq:associativity-clique}, dividing by the nonzero product $a_{ij}a_{ik}a_{jk}$, and then by $z_k$ gives
+\[
+ \frac{1}{z_ka_{jk}}=\frac{1}{z_ka_{ik}}-\frac{1}{z_ja_{ij}}.
+\]
+Equivalently,
+\begin{equation}\label{eq:cocycle}
+ d_{ik}=d_{ij}+d_{jk}.
+\end{equation}
+Fix a root $o\in C$, set $t_o=0$, and set $t_i=d_{oi}$ for $i\ne o$. Antisymmetry and~\eqref{eq:cocycle} imply $d_{ij}=t_j-t_i$. For a two-vertex component the same construction works without a triple equation. Since every $d_{ij}$ is nonzero, the nodes are pairwise distinct. Equation~\eqref{eq:cauchy-form} and the gauge statements now follow directly.
+\end{proof}
+
+The theorem concerns the \emph{internal mixed entries} of a free component. It does not say that its coordinates form an isolated direct summand of the tensor. For $i\in C$ and $j\notin C$, an entry $a_{ij}\ne0$ with $a_{ji}=0$ is possible: it pins $j$ but not $i$. Such couplings are important in the full-rank construction below. Discarding them would lead to a false block-decomposition claim.
+
+The use of ``Cauchy'' in~\eqref{eq:cauchy-form} refers to reciprocal node differences with a column scaling. It does not assert that the full tensor is a classical symmetric Cauchy tensor with entries obtained by reciprocal sums of generating coordinates. The zeros on all-distinct entries and the freely varying diagonal are part of the construction.
+
+\subsection{An explicit spectral realization}
+We now prove that the internal form is realizable for any number of vertices. This supplies more than a consistency argument: the nonzero orthogonal components have an explicit description through one-variable roots.
+
+\begin{theorem}[Spectral Cauchy family]\label{thm:spectral}
+Let $m\ge1$, let $t_1,\ldots,t_m$ be distinct real numbers, and let $z_1,\ldots,z_m$ be nonzero. Put
+\begin{equation}\label{eq:cauchy-defs}
+ w_i=z_i^{-2},\qquad
+ f_i=\sum_{j\ne i}\frac{w_j}{t_j-t_i}.
+\end{equation}
+For $\kappa\in\R$, define a symmetric cubic tensor $T(\kappa)$ by
+\begin{align}
+ T_{iii}(\kappa)&=z_i(\kappa-f_i),\label{eq:cauchy-diagonal}\\
+ T_{iij}(\kappa)&=\frac{1}{z_j(t_j-t_i)}\quad(i\ne j),\label{eq:cauchy-pairs}\\
+ T_{ijk}(\kappa)&=0\quad(i,j,k\text{ all distinct}).\nonumber
+\end{align}
+Every $T(\kappa)$ is real orthogonally decomposable. Its rank is $m$ if $\kappa\ne0$ and $m-1$ if $\kappa=0$. Its mixed part has fiber
+\begin{equation}\label{eq:cauchy-fiber}
+ \calF(P_{\rm mix}T)=x(0)+\spanof\{z\},
+\end{equation}
+and distance $m$.
+
+More explicitly, let $g(\rho)=\sum_i w_i/(t_i-\rho)$. For every real root $\rho$ of $g(\rho)=\kappa$, define
+\begin{equation}\label{eq:cauchy-eigen}
+ r_i(\rho)=\frac{1}{z_i(t_i-\rho)},\qquad
+ \lambda(\rho)=\sqrt{g'(\rho)},\qquad
+ u(\rho)=\frac{r(\rho)}{\lambda(\rho)}.
+\end{equation}
+Then
+\begin{equation}\label{eq:cauchy-decomposition}
+ T(\kappa)=\sum_{\rho:g(\rho)=\kappa}\lambda(\rho)u(\rho)^{\otimes3}.
+\end{equation}
+For $\kappa=0$, the common nullspace has the additional direction $(1/z_i)_{i=1}^m$.
+\end{theorem}
+\begin{proof}
+Relabel so $t_1<\cdots<t_m$. On every open interval between successive nodes,
+\[
+ g'(\rho)=\sum_i\frac{w_i}{(t_i-\rho)^2}>0,
+\]
+and $g$ increases from $-\infty$ to $+\infty$. There is one simple root of $g(\rho)=\kappa$ in each such interval. To the left of $t_1$, $g$ increases from $0$ to $+\infty$, giving one additional root precisely when $\kappa>0$. To the right of $t_m$, it increases from $-\infty$ to $0$, giving one precisely when $\kappa<0$. Therefore there are $m$ roots for nonzero $\kappa$ and $m-1$ for zero $\kappa$. No root equals a node.
+
+For any root $\rho$, $\norm{r(\rho)}^2=g'(\rho)$, so $u(\rho)$ is a unit vector. If $\rho\ne\sigma$ are two roots, then
+\begin{equation}\label{eq:root-orthogonality}
+ \ip{r(\rho)}{r(\sigma)}
+ =\sum_i\frac{w_i}{(t_i-\rho)(t_i-\sigma)}
+ =\frac{g(\rho)-g(\sigma)}{\rho-\sigma}=0.
+\end{equation}
+Thus the root vectors are mutually orthogonal.
+
+It remains to verify that these vectors diagonalize the slices with exactly the coefficients in~\eqref{eq:cauchy-decomposition}. Fix a root $\rho$ and write $r=r(\rho)$. For $j\ne i$, the only nonzero terms in row $j$ of slice $T_i$ are in columns $i,j$, so
+\begin{align*}
+ (T_ir)_j
+ &=\frac{r_i}{z_j(t_j-t_i)}
+    -\frac{r_j}{z_i(t_j-t_i)}\\
+ &=\frac{1}{z_iz_j(t_j-t_i)}
+   \left(\frac{1}{t_i-\rho}-\frac{1}{t_j-\rho}\right)
+ =r_ir_j.
+\end{align*}
+For row $i$, equations~\eqref{eq:cauchy-defs}--\eqref{eq:cauchy-pairs} give
+\begin{align*}
+ (T_ir)_i
+ &=\frac{\kappa-f_i}{t_i-\rho}
+   +\sum_{j\ne i}\frac{w_j}{(t_j-t_i)(t_j-\rho)}\\
+ &=\frac{1}{t_i-\rho}
+   \left(\kappa-\sum_{j\ne i}\frac{w_j}{t_j-\rho}\right)
+ =\frac{w_i}{(t_i-\rho)^2}=r_i^2.
+\end{align*}
+The penultimate equality uses $g(\rho)=\kappa$. Hence $T_ir=r_ir$, or
+\begin{equation}\label{eq:slice-eigen}
+ T_iu=\lambda(\rho)u_i u.
+\end{equation}
+When $\kappa\ne0$, these are $m$ orthonormal vectors, a complete basis. Equality~\eqref{eq:slice-eigen} proves~\eqref{eq:cauchy-decomposition} slice by slice.
+
+When $\kappa=0$, let $v_i=1/z_i$. Direct substitution shows $(T_iv)_j=0$ for $j\ne i$, since its two terms cancel. In row $i$ the diagonal term is $-f_i$ and the off-diagonal sum is $f_i$, so $T_iv=0$. Moreover,
+\[
+ \ip{v}{r(\rho)}=\sum_i\frac{w_i}{t_i-\rho}=g(\rho)=0.
+\]
+The $m-1$ root vectors together with $v/\norm v$ are an orthonormal basis. All $\lambda(\rho)$ are positive, giving the decomposition and the asserted ranks by Lemma~\ref{lem:unique-factors}. This reasoning also covers $m=1$: there is one root for nonzero $\kappa$, and the zero tensor for $\kappa=0$.
+
+Finally, all pair entries are nonzero and satisfy $a_{ji}z_i+a_{ij}z_j=0$, while every all-distinct entry is zero. The graph is a single balanced free clique. Theorem~\ref{thm:graph} gives a one-dimensional kernel supported on all $m$ vertices, and Theorem~\ref{thm:affine} yields~\eqref{eq:cauchy-fiber}. Its distance is $m$.
+\end{proof}
+
+The theorem proves that a one-dimensional fiber can have any support size. Varying $\kappa$ changes the tensor only on the diagonal, but its orthogonal factors move through the roots of a secular equation. The ambiguity is consequently not merely a relabeling of fixed factors. A rank drop occurs at $\kappa=0$; everywhere else the family has full rank.
+
+\subsection{A three-coordinate example}
+Take $m=3$, $z=(1,1,1)$, and $t=(0,1,1/2)$. Then $f=(3,-3,0)$ and
+\[
+ x(\kappa)=(\kappa-3,\kappa+3,\kappa).
+\]
+The mixed entries are
+\begin{equation}\label{eq:three-example}
+ a_{12}=1,\ a_{21}=-1,\ a_{13}=2,\ a_{31}=-2,
+ \ a_{23}=-2,\ a_{32}=2,\qquad h_{123}=0.
+\end{equation}
+Every edge gain is one. The fiber is a line with direction $(1,1,1)$, so $d(H)=3$. No one- or two-coordinate ambiguity exists. The tensor at $\kappa=0$ has rank two, and every nonzero $\kappa$ has rank three.
+
+This example is small enough to expose an important testing boundary. An enumeration in which each mixed orbit belongs only to $\{-1,0,1\}$ cannot contain it. An apparent absence of three-coordinate ambiguities in that enumeration is not a proof that they never occur. Enlarging the pair alphabet to include $\pm2$ produces the example exactly. Its role is to falsify a structural conjecture, not to estimate the frequency of ambiguities under a distribution of latent models.
+
+For a reported diagonal $d=(-2,4,2)$, the ratios relative to $x(0)=(-3,3,0)$ are $(1,1,2)$. The modal completion has $\kappa=1$ and requires one change. At budget two, the completion $\kappa=2$ is also possible. At budget three, every unobserved parameter value is admissible, so the list becomes infinite. This illustrates the difference between unique nearest completion, uniform one-error correction, and a budget-dependent list.
+
+\subsection{Every distance at full tensor rank}
+A direct sum of a distance-$m$ family with a purely diagonal tensor does not realize distance $m$ in a larger ambient space: the added isolated coordinates create distance-one ambiguities. A coupling is needed to make the complement rigid without pinning the desired free component.
+
+\begin{theorem}[Full-rank distance spectrum]\label{thm:all-distances}
+For every $n\ge1$ and every integer $1\le m\le n$, there is a rational tensor $T\in\odeco$ of rank $n$ whose mixed part has a one-dimensional fiber and distance exactly $m$.
+\end{theorem}
+\begin{proof}
+For $m=n$, use Theorem~\ref{thm:spectral} with $t_i=i-1$, $z_i=1$, and $\kappa=1$. Suppose $m<n$. Begin with the same $m$-coordinate Cauchy tensor and add an anchor coordinate $q=m+1$. Modify the original diagonal by subtracting $t_i$, and set
+\begin{equation}\label{eq:anchor}
+ T_{iiq}=1\quad(i\le m),\qquad T_{iqq}=0\quad(i\le m),\qquad
+ T_{qqq}=1,
+\end{equation}
+with symmetry understood and all other new mixed entries zero. The anchor slice on these $m+1$ coordinates is the identity.
+
+We verify that the augmented slices commute. The original Cauchy slices commute. Changing their diagonal entries by $-t_i$ affects the $(i,j)$ commutator entry, for $i\ne j\le m$, by
+\[
+ -t_i a_{ji}-t_j a_{ij}
+ =(t_i-t_j)\frac{1}{t_j-t_i}=-1.
+\]
+The new anchor products contribute $+1$ at that entry, canceling the change. Other entries within the original block are unchanged because all distinct-index coefficients vanish. At an entry $(i,q)$ of the commutator for slices $i,j$, the two terms are $T_{iij}$ and $T_{jii}$, which are equal by symmetry, so they cancel. The $(j,q)$ entry cancels in the same way, and all remaining anchor entries are zero. The anchor slice commutes because it is the identity. Lemma~\ref{lem:commuting} proves that this block is odeco. Its identity slice has rank $m+1$, so the block's tensor rank is $m+1$.
+
+If $n>m+1$, take a direct sum with nonzero rational diagonal components on the remaining coordinates. The resulting tensor is odeco and has rank $n$. It still has unwanted isolated ambiguities, which the following rotation removes.
+
+Let $k=n-m$ be the size of the complement, including the anchor. On that complement use the rational orthogonal Householder matrix
+\begin{equation}\label{eq:householder}
+ R=I-\frac{2vv^\top}{v^\top v},\qquad v=(1,2,\ldots,k)^\top,
+\end{equation}
+and act as the identity on the first $m$ coordinates. Every entry of the first column of $R$ is nonzero. For $k=1$ it is $-1$; for $k\ge2$, its first entry is $1-2/\sum_{j=1}^k j^2>0$, and the others are $-2j/\sum_{j=1}^k j^2$.
+
+After this orthogonal change of basis, the internal Cauchy entries on the first $m$ coordinates are unchanged. For $i\le m$ and every complementary coordinate $j$, the new entries satisfy
+\[
+ T_{iij}=R_{j,q}\ne0,\qquad T_{ijj}=0.
+\]
+Every complementary vertex is therefore pinned by a one-sided pair. All-distinct entries involving an original vertex remain zero: before rotation there were no entries with that vertex and two complementary indices, nor with two different original vertices and a complementary index. The first $m$ vertices retain their single balanced clique and are unpinned. The graph has exactly one free component of size $m$. Orthogonal rotation preserves tensor rank and orthogonal decomposability, and every coefficient is rational. Theorems~\ref{thm:affine} and~\ref{thm:graph} complete the proof.
+\end{proof}
+
+\subsection{What rank and incoherence do not determine}
+The full-rank spectrum shows that rank alone cannot determine the correction distance. Even maximally flat orthogonal factors do not guarantee one-error correction. In dimension two, take
+\[
+ U=\frac{1}{\sqrt2}\begin{pmatrix}1&1\\1&-1\end{pmatrix},
+ \qquad (\lambda_1,\lambda_2)=(2\sqrt2,4\sqrt2).
+\]
+The symmetric orbits $(T_{111},T_{112},T_{122},T_{222})$ are $(3,-1,3,-1)$. The tensor has rank two and the flatness parameter $\sqrt n\max_{ia}|u_{ia}|$ equals one. Its mixed graph is one free pair, so $d(H)=2$ and uniform correction of one error is impossible. This does not refute incoherence-based robust recovery theorems, whose additional rank and sparsity conditions must also hold. It shows why flatness alone is not a certificate for the current mask.
+
+A fixed lower rank can alter a fiber in the opposite direction. For $n=2$ and nonzero mixed entries $a=T_{112}$, $b=T_{122}$, a rank-one symmetric tensor must have
+\begin{equation}\label{eq:rank-one}
+ T_{111}=\frac{a^2}{b},\qquad T_{222}=\frac{b^2}{a}.
+\end{equation}
+Indeed, for $T=\lambda u^{\otimes3}$ the first ratio is $\lambda u_1^3$ and the second is $\lambda u_2^3$. Conversely, these values make all the entries a rank-one cubic, by taking the ratio $u_2/u_1=b/a$ and normalizing. The unrestricted odeco fiber is a line, whereas its rank-one part is a point. Our exact distance is therefore stated for the union of ranks, with Corollary~\ref{cor:fullrank} covering full-rank competition, not for every separately fixed lower rank.

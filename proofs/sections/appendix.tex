@@ -1,0 +1,161 @@
+\section{Worked systems and boundary cases}\label{app:worked}
+\subsection{The complete two-coordinate system}
+A two-dimensional symmetric cubic is specified by four entries. Write
+\[
+ T_1=\begin{pmatrix}x_1&a\\a&b\end{pmatrix},\qquad
+ T_2=\begin{pmatrix}a&b\\b&x_2\end{pmatrix}.
+\]
+There is one independent commutator equation,
+\begin{equation}\label{eq:two-system}
+ bx_1+ax_2=a^2+b^2.
+\end{equation}
+If $a=b=0$, every diagonal is a completion and the graph consists of two free singletons. If $a\ne0,b=0$, then $x_2=a$ while $x_1$ is free. The pair entry pins vertex two; it does not pin vertex one. If $a=0,b\ne0$, the roles reverse. If both are nonzero, the graph is one free pair and its direction can be chosen as $(a,-b)$.
+
+These cases have distances one, one, one, and two, respectively. None has a unique mixed-only completion. Equation~\eqref{eq:two-system} is always consistent in dimension two, but this fact does not extend to dimension three. The point of the example is to verify the indexing and pin conventions before using a larger graph, not to extrapolate a universal low-dimensional obstruction.
+
+For example, $a=-1,b=3$ gives $3x_1-x_2=10$, containing the full-rank tensor with diagonal $(3,-1)$. The nearby diagonal $(3+\tau,-1+3\tau)$ gives a different full-rank completion for all sufficiently small nonzero $\tau$. Its difference is supported on both coordinates. Splitting that difference across the two singleton supports produces an observation with two one-error explanations, exactly as in Theorem~\ref{thm:correction}.
+
+\subsection{A fully explicit inconsistency witness}
+Set all two-equal-index mixed entries of a three-dimensional tensor to zero, and set $H_{123}=1$. The mixed slices are
+\[
+ H_1=\begin{pmatrix}0&0&0\\0&0&1\\0&1&0\end{pmatrix},\quad
+ H_2=\begin{pmatrix}0&0&1\\0&0&0\\1&0&0\end{pmatrix},\quad
+ H_3=\begin{pmatrix}0&1&0\\1&0&0\\0&0&0\end{pmatrix}.
+\]
+The all-distinct entry pins all three vertices, and $L_H$ has full column rank. Nevertheless, the $(1,2)$ entry of $[H_1,H_2]$ is $-1$, while the corresponding row of $L_H$ is zero because its two coefficients are $H_{122}=H_{112}=0$. This single equation is $0=1$ in the right-side convention of~\eqref{eq:affine-main}. A unit vector on this row is a negative certificate. Thus even an all-pinned graph and full column rank do not establish existence.
+
+This example is also a useful test of a verifier that checks only a candidate's diagonal equations but omits constant rows. A diagonal recovered from a selected square subsystem cannot satisfy the omitted $0=1$ equation. The complete direct-product check rejects it regardless of how accurately that square subsystem was solved.
+
+
+\subsection{A complete three-coordinate positive certificate}
+For the mixed entries in~\eqref{eq:three-example}, six of the nine independent commutator rows vanish identically. The remaining system is
+\begin{equation}\label{eq:worked-matrix}
+ \begin{pmatrix}-1&1&0\\-2&0&2\\0&2&-2\end{pmatrix}
+ \begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}
+ =\begin{pmatrix}6\\6\\6\end{pmatrix}.
+\end{equation}
+Its third row is twice its first row minus its second row, including the right side. Thus the apparent third constraint adds no rank and causes no inconsistency. A particular solution is $x^0=(-3,3,0)^\top$ and the vector $z=(1,1,1)^\top$ is a null direction. The first two rows and first two columns have determinant two. This minor proves rank at least two; the nonzero null vector proves rank at most two. These objects constitute the complete positive certificate. None of the six omitted rows may be dropped by an implementation without first checking that both its coefficient vector and its right side are zero.
+
+The Gram matrix and two representative inverse witnesses are
+\begin{align}
+ G&=\begin{pmatrix}5&-1&-4\\-1&5&-4\\-4&-4&8\end{pmatrix},\label{eq:worked-gram}\\
+ (G+e_1e_1^\top)^{-1}
+ &=\begin{pmatrix}1&1&1\\1&4/3&7/6\\1&7/6&29/24\end{pmatrix},\label{eq:worked-inverse-one}\\
+ (G+e_3e_3^\top)^{-1}
+ &=\begin{pmatrix}29/24&25/24&1\\25/24&29/24&1\\1&1&1\end{pmatrix}.\label{eq:worked-inverse-three}
+\end{align}
+The witness for coordinate two is obtained by interchanging coordinates one and two in~\eqref{eq:worked-inverse-one}. Direct multiplication verifies each inverse using only rational operations. Their traces are $85/24$, $85/24$, and $41/12$, respectively. Hence every single-coordinate restriction has smallest squared singular value at least $24/85$. Adding more trusted coordinates adds a positive semidefinite matrix and cannot decrease that eigenvalue: this follows by minimizing the Rayleigh quotient over unit vectors.
+
+For any candidate support of size at most one and any true support of size at most one, their union leaves at least one coordinate. Therefore $\gamma=1/2$ is a valid common restricted margin: $1/4<24/85$. This is a deliberately rounded rational bound, not the exact smallest singular value. With a fixed candidate support the executable certificate still includes every required inverse witness, including those with more than one retained coordinate. The monotonicity argument explains the bound mathematically; it does not authorize omitting records from the verifier's declared format.
+
+At exact mixed observations, take the candidate $\widehat x=x(\widehat\kappa)$ on this affine line. Its commutator residual is zero. For diagonal noise bounded by $\epsilon$ and one gross error, Theorem~\ref{thm:posterior} gives the explicit radius
+\begin{equation}\label{eq:worked-radius}
+ \norm{\widehat x-x^*}\le 2(e_0+\epsilon),
+ \qquad e_0=\norm{P_{\widehat S^c}(d-\widehat x)}.
+\end{equation}
+For example, let the clean diagonal be $x(1)=(-2,4,1)$ and observe $d=(-2+A,4,1)$ for any real amplitude $A$. The candidate $x(1)$ with $\widehat S=\{1\}$ has $e_0=0$. When $\epsilon=0$, the radius is zero, independently of $A$. The certificate is consistent with exact one-error correction at distance three.
+
+By contrast, an arbitrary candidate on the same line need not have a small radius. If $\widehat\kappa\ne1$ while the reported second and third coordinates remain clean, then $e_0=\sqrt2\,|\widehat\kappa-1|$. Its true diagonal error is $\sqrt3\,|\widehat\kappa-1|$, which satisfies~\eqref{eq:worked-radius} but is not zero. Thus even with a correct support, the posterior certificate quantifies the candidate's residual rather than assuming the candidate is correct.
+
+This calculation uses the exact mixed tensor of the example. Under a perturbation of the mixed entries, its Gram matrix changes and the displayed inverse witnesses generally cease to be inverses. Reusing them without checking the new products would be invalid. The full noisy procedure rebuilds these products and includes the coefficient-perturbation term in the radius. The example isolates the support mechanism while keeping this distinction visible.
+
+\subsection{Support families need not be cardinality balls}
+Suppose a consistent fiber has two free components $C_1=\{1,2,3\}$ and $C_2=\{4,5,6,7\}$. Under a cardinality budget one, every error is correctable. Under a budget two, uniform correction fails because $C_1$ fits inside a union of two budget-two sets. This need not imply failure for every more structured family with sets of size two.
+
+For instance, take the allowed sets to be $\{1,4\}$ and $\{2,5\}$, together with their subsets. No union of two allowed sets contains either free component. The support-family criterion therefore gives uniform uniqueness, although each allowed error may have two nonzero coordinates and the global distance is only three. Conversely, allowing $\{1,2\}$ and $\{3,4\}$ makes the first component ambiguous. The values of the error entries are irrelevant in both examples.
+
+This observation is useful when support information is physically meaningful, but the support family must be declared before using the guarantee. A family selected after inspecting the unknown truth would not provide an identifiability claim from the actual observations.
+
+\subsection{Near a rank drop}
+In the Cauchy family, the parameter $\kappa$ is unrestricted. Every nonzero value gives full rank; the tensor at zero has rank $m-1$. The mixed observations are identical at all these points. This makes a distinction between structural and numerical rank unavoidable. Exact knowledge that the rank is full excludes one parameter value, not the rest of the affine line. A positive lower bound on a component weight would impose a quantitative restriction, but no such bound is assumed in the exact correction theorem.
+
+There is also a geometric explanation of the disappearing component. As $\kappa$ approaches zero from above, the exterior root lies to the left of all nodes and moves toward $-\infty$. For $\kappa$ approaching zero from below, it moves toward $+\infty$. Put $W=\sum_i w_i$. As $|\rho|\to\infty$,
+\[
+ g(\rho)=-\frac{W}{\rho}+O(\rho^{-2}),\qquad
+ g'(\rho)=\frac{W}{\rho^2}+O(|\rho|^{-3}).
+\]
+Hence the corresponding weight tends to zero, while its unit direction tends, up to sign, to $(1/z_i)_i/\sqrt W$. That is exactly the common null direction at $\kappa=0$. The remaining roots stay in the bounded intervals between nodes. This is consistent with the rank formula and explains why a factor-error conclusion needs care near this point.
+
+\section{Trusted coordinate queries and the observation basis}\label{app:queries}
+The disjoint-support description gives a simple measurement-design consequence. Here a query means observing one pure diagonal entry without gross error. Mixed entries are already known exactly. The result concerns only coordinate queries; an arbitrary linear measurement could combine several components and is a different design problem.
+
+\begin{proposition}[Minimum trusted queries]\label{prop:queries}
+Let $\calF(H)\ne\varnothing$. The smallest number of additional trusted diagonal-coordinate queries that uniquely determine every completion is $|\calC(H)|$. A set of queries succeeds if and only if it intersects every free component.
+\end{proposition}
+\begin{proof}
+On component $C$, every completion has coordinates $x_i^0+\alpha_C(z_C)_i$. A trusted coordinate $i\in C$ determines $\alpha_C$ because $(z_C)_i\ne0$. Thus one query in each component suffices. If a component contains no queried coordinate, its nonzero direction vanishes on all queried positions and can be added to a completion without changing any answer. Therefore each component must be intersected, and disjointness makes the stated number necessary.
+\end{proof}
+
+The same argument addresses selective protection against subsequent unknown errors. If a set $Q$ of diagonal coordinates is made trusted, the residual ambiguity space is
+\[
+ \{z\in\ker L_H:z_i=0\text{ for all }i\in Q\}.
+\]
+Every component touched by $Q$ disappears from this space; every untouched component remains intact. Thus protection against $s$ unknown errors on the remaining untrusted coordinates requires touching every free component of size at most $2s$. One trusted coordinate in each such component is sufficient and necessary for a uniform guarantee. This is a direct consequence of the support theorem, not a claim about optimal sensor placement under a broader cost model.
+
+\begin{proposition}[One noisy trusted query within a component]\label{prop:query-conditioning}
+Suppose the exact mixed entries are known and one component parameter is estimated from a query at $i\in C$ with additive error at most $\eta$. The induced Euclidean diagonal error on $C$ is at most
+\begin{equation}\label{eq:query-error}
+ \eta\frac{\norm{z_C}}{|(z_C)_i|}.
+\end{equation}
+Among single-coordinate queries with the same error bound, this worst-case bound is minimized by choosing a coordinate of maximum $|(z_C)_i|$.
+\end{proposition}
+\begin{proof}
+The parameter is obtained by subtracting $x_i^0$ from the query and dividing by $(z_C)_i$. Its error is at most $\eta/|(z_C)_i|$. Multiplication by the entire component vector gives~\eqref{eq:query-error}. Equality is attained when the query error has magnitude $\eta$, so maximizing the denominator minimizes the worst case.
+\end{proof}
+
+\begin{proposition}[Costed and repeated coordinate queries]\label{prop:query-cost}
+Give coordinate $i$ a nonnegative trust cost $c_i$. The minimum cost for unique completion is
+\[
+ \sum_{C\in\calC(H)}\min_{i\in C}c_i,
+\]
+and the minimum cost for uniform correction of at most $s$ errors is the same sum over components with $|C|\le2s$.
+
+For a nonempty queried subset $Q_C\subseteq C$, suppose
+$y_i=x_i^0+\alpha_C(z_C)_i+\epsilon_i$. The least-squares estimator
+\[
+ \widehat\alpha_C=
+ \frac{\sum_{i\in Q_C}(z_C)_i(y_i-x_i^0)}
+      {\sum_{i\in Q_C}(z_C)_i^2}
+\]
+satisfies, under $\|\epsilon_{Q_C}\|_2\le\eta_C$,
+\[
+ \|(\widehat\alpha_C-\alpha_C)z_C\|_2
+ \le \eta_C\frac{\|z_C\|_2}{\|(z_C)_{Q_C}\|_2}.
+\]
+\end{proposition}
+\begin{proof}
+Any successful exact design must hit each required component, and one query anywhere in that component suffices. Because the free components are disjoint, choosing a cheapest coordinate in each required component is globally optimal. Proposition~\ref{prop:queries} identifies all required components for uniqueness, and the support criterion identifies those of size at most $2s$ for correction. The least-squares formula is orthogonal projection onto the nonzero vector $(z_C)_{Q_C}$. Cauchy--Schwarz bounds its scalar error by $\eta_C/\|(z_C)_{Q_C}\|_2$; multiplying by $\|z_C\|_2$ proves the claim.
+\end{proof}
+
+These query statements separate graph support from conditioning. Two fibers may have the same component sizes and hence the same exact correction distance, while having very different coordinate ratios and noisy query sensitivity. The cost and error models are declared deterministic inputs; the formulas are not a stochastic sensor-placement theorem. The exact code-like description is not, on its own, a uniform Euclidean stability bound.
+
+\begin{proposition}[Mask-preserving orthogonal maps]\label{prop:mask-symmetry}
+An orthogonal matrix $U$ maps the coordinate-diagonal tensor subspace $\{D(x):x\in\R^n\}$ onto itself under the same change of basis in all three modes if and only if $U$ is a signed permutation matrix.
+\end{proposition}
+\begin{proof}
+A signed permutation clearly permutes the coordinate cubes, with possible signs. Conversely, suppose the diagonal subspace is preserved. The image of each basis cube $e_i^{\otimes3}$ is $v_i^{\otimes3}$, where $v_i$ is the corresponding unit column of the transformation (or its transpose, depending on the coordinate convention). If $v_i$ had two nonzero coordinates, say $v_{pi}$ and $v_{qi}$ with $p\ne q$, its mixed entry $(p,p,q)$ would be $v_{pi}^2v_{qi}\ne0$, contradicting membership in the diagonal subspace. Thus every column has one nonzero entry, of magnitude one. Orthogonality places these entries in different rows, proving that the matrix is a signed permutation.
+\end{proof}
+
+The proposition concerns preservation of the entire nuisance subspace, not accidental cancellation for one particular noise vector. A special noise realization can transform to a diagonal tensor under a larger class of transformations, but that does not justify a guarantee uniform over all diagonal corruptions. This provides a precise reason that arbitrary whitening cannot simply be inserted before the completion method.
+
+\section{Certificate representation and reproducibility}\label{app:representation}
+\subsection{Input semantics}
+A finite input records $n$ and the values of symmetric orbits in lexicographic order over triples $i\le j\le k$. The executable representation uses zero-based indices, while the formulas in the article use one-based indices. Every value is an integer or a rational string. Floating-point decimal input is not used for proof-critical arithmetic. The mixed projection deliberately discards pure-diagonal orbit entries when constructing the completion problem.
+
+The declaration of the base field is not encoded by a numerical tolerance. A rational positive certificate proves a rational linear identity. Its real orthogonal-decomposition conclusion follows from Lemma~\ref{lem:commuting}. It would be incorrect to interpret the same certificate as asserting the existence of rational orthogonal factors. In the Cauchy examples, roots of $g(\rho)=\kappa$ can be irrational even though every tensor entry and every completion equation is rational.
+
+\subsection{What the checker trusts}
+The checker reconstructs a symmetric array from the orbit encoding and forms full slice products. For positive certificates it verifies the particular completion, each proposed translated completion, linear independence of the directions, and the rank lower-bound minor. For negative certificates it independently reconstructs every row used by the witness and checks that the coefficient sum vanishes while the right-side sum is nonzero. Invalid dimensions, malformed rational values, duplicate witness rows, and invalid row indices are rejected in the relevant checks.
+
+For a stability certificate, the checker enumerates the complete ordered family of supports of size at most $s$ and matches each inverse witness to its support. It recomputes the Gram matrix from independently formed rows, checks the matrix inverse products, and checks every squared norm and radius inequality. Omitting a support is a failure, not a relaxation of the model.
+
+This establishes a modest trust boundary. Certificate production, graph traversal, support selection, and the candidate solver are not trusted for acceptance. Exact integer and fraction arithmetic, the verifier's implementation, and the mathematical argument linking the checked identities to the conclusion remain trusted. The finite mutation suite tests representative errors in this boundary. It is not a proof that every parser path is secure, nor a machine-checked formalization of the general theorems.
+
+\subsection{Reproduction and numerical displays}
+The repository includes all generated inputs, certificates, raw result records, and the fixed selection design. The complete campaign is rerun with one command, and a separate checking command reads the saved certificates. No network acquisition or external dataset is needed. Each suite can also be rerun separately; a completed suite replaces its result files only after successful termination.
+
+Plots and displayed numerical tables are derived from exact fractions. Square roots used solely for displaying actual errors are floating-point evaluations of saved exact squared errors. They are not used to accept a certificate. Certified radii and restricted margins remain rational throughout production and verification. Display rounding therefore cannot turn a failed inequality into an accepted one.
+
+The retained negative evidence has a distinct purpose. Inconsistent inputs test the existence decision; the three-coordinate ambiguity tests the claimed support structure; the unexpected Householder ambiguity tests the use of genericity; singular restrictions and excessive declared noise test refusal to certify; and the unequal-direction example tests coordinate normalization. None is discarded from the evidence because it does not support unique recovery. Together with the general proofs, these cases delimit what the completion method establishes.
+
+A certificate verifies its encoded tensor, not its membership in a declared experiment. The saved-result checker therefore reconstructs each finite input from its family/index identifier and alphabet, checks the exact Cartesian index range for omissions and duplicates, and compares every orbit with that independent construction. For each positive record it also checks that the saved null-basis supports are nonempty and pairwise disjoint, that every multi-vertex support is a clique with the declared gain relation, and that no all-distinct entry pins a declared free support. The resulting support profiles and coefficient bit-width maximum must match the summary. Acceptance of a certificate for a different input cannot satisfy these checks. For noisy records, the checker reconstructs the mixed perturbation from the saved observation and truth, checks the stated Frobenius bound, and checks the clean-coordinate error bound. Those truth-dependent checks validate the synthetic experiment; they remain separate from the posterior verifier, which receives no truth and certifies only the conditional inequality. Matching summary counts alone do not establish coverage of every declared finite input.

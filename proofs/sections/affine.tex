@@ -1,0 +1,74 @@
+\section{An exact affine completion certificate}\label{sec:affine}
+\subsection{Eliminating the quadratic unknowns}
+Let $E_{ii}=e_ie_i^\top$. A candidate completion $T=H+D(x)$ has slices $T_i=H_i+x_iE_{ii}$. For $i\ne j$, $E_{ii}E_{jj}=E_{jj}E_{ii}=0$, and hence
+\begin{equation}\label{eq:comm-expand}
+ [T_i,T_j]=[H_i,H_j]+x_i[E_{ii},H_j]+x_j[H_i,E_{jj}].
+\end{equation}
+The equality is exact for every $x$. No small-error assumption or local linearization has been used.
+
+Index the independent commutator entries by
+\[
+ \mathcal I=\{(i,j,p,q):1\le i<j\le n,\ 1\le p<q\le n\},
+ \qquad M=|\mathcal I|=\binom n2^2.
+\]
+Define $c_H\in\R^M$ and $L_H\in\R^{M\times n}$ through
+\begin{align}
+ (c_H)_{ijpq}&=[H_i,H_j]_{pq},\label{eq:c-row}\\
+ (L_H)_{ijpq,i}&=(\one_{p=i}-\one_{q=i})H_{jpq},\label{eq:l-row}\\
+ (L_H)_{ijpq,j}&=(\one_{q=j}-\one_{p=j})H_{ipq},\nonumber
+\end{align}
+with all other columns zero. Skew symmetry means that the entries indexed by $p<q$ determine a full commutator. Reversing $i,j$ only changes its sign.
+
+\begin{theorem}[Affine fiber]\label{thm:affine}
+For every real mixed symmetric cubic $H$,
+\begin{equation}\label{eq:affine-main}
+ \calF(H)=\{x:L_Hx=-c_H\}.
+\end{equation}
+Thus the fiber is empty, a singleton, or an affine space of positive dimension. If it is nonempty and $x^0\in\calF(H)$, then
+\begin{equation}\label{eq:fiber-null}
+ \calF(H)=x^0+\ker L_H.
+\end{equation}
+The diagonal is determined by the mixed entries alone exactly when the system is consistent and $\rank L_H=n$.
+\end{theorem}
+\begin{proof}
+Equations~\eqref{eq:comm-expand}--\eqref{eq:l-row} say that $L_Hx+c_H$ lists every independent entry of the slice commutators of $H+D(x)$. Their vanishing is equivalent to pairwise commutation. Lemma~\ref{lem:commuting} makes it equivalent to real orthogonal decomposability. The remaining assertions are elementary facts about the solution set of a linear system.
+\end{proof}
+
+Consistency and rank must not be conflated. A full-column-rank system may still have no solution because there are more equations than unknowns. Conversely, a rank-deficient system can be entirely consistent, in which case its nullspace describes actual tensors, rather than spurious infinitesimal directions. Checking only a nonsingular pivot minor would certify neither case correctly.
+
+Theorem~\ref{thm:affine} also explains why finite but nonunique completion lists do not occur when every diagonal coordinate is unobserved and the rank is unrestricted within $\odeco$. A positive-dimensional real affine space has infinitely many points. Finite lists can arise after reported diagonal values and an error budget are imposed, or after an additional fixed-rank restriction; these are different inverse problems.
+
+\subsection{Positive and negative certificates}
+For rational mixed entries, all the data in~\eqref{eq:affine-main} are rational. A consistent system therefore has a rational particular solution and a rational nullspace basis, even when the real orthogonal factors of a completion are irrational. This separates arithmetic certification of the tensor from numerical representation of its factors.
+
+A positive certificate contains a vector $x^0$, a list $Z=(z_1,\ldots,z_{n-r})$, and a nonsingular $r\times r$ minor of $L_H$ specified by row and column indices. The verifier checks
+\begin{equation}\label{eq:positive-cert}
+ L_Hx^0=-c_H,\qquad L_HZ=0,\qquad \rank Z=n-r,
+\end{equation}
+and nonsingularity of the indicated minor. The minor proves $\rank L_H\ge r$; the independent null vectors prove $\rank L_H\le r$. These are matching bounds. In particular, the list is a basis of the entire nullspace, not a list of examples of ambiguities.
+
+A negative certificate is a vector $y\in\Q^M$ for which
+\begin{equation}\label{eq:negative-cert}
+ y^\top L_H=0,\qquad y^\top(-c_H)\ne0.
+\end{equation}
+Such a vector witnesses inconsistency by multiplying the alleged equation $L_Hx=-c_H$. A rational inconsistent system always has this witness by elimination. Only its nonzero coordinates need be stored.
+
+\begin{proposition}[Exact certificates]\label{prop:certificates}
+For rational $H$, the positive verification conditions certify exactly the affine fiber in~\eqref{eq:fiber-null}. A verified negative witness certifies that the real fiber is empty. Every rational input admits one of these two certificate types.
+\end{proposition}
+\begin{proof}
+Soundness of a positive certificate follows from the matching rank bounds and the particular solution, followed by Theorem~\ref{thm:affine}. Soundness of a negative one follows by the contradiction $0=y^\top L_Hx=y^\top(-c_H)\ne0$. Gaussian elimination either exhibits an inconsistent row with its linear-combination provenance or produces pivots, a particular solution, and a basis of free variables. These operations remain in $\Q$, giving completeness. Real consistency and rational consistency agree for a rational linear system.
+\end{proof}
+
+The verifier in our artifact does not call the producer's row formula. It expands slice products directly. For each coordinate $a$, it obtains a coefficient by comparing the commutator at diagonal $e_a$ with the commutator at zero. Positive certificates are also checked through the full commutators of $H+D(x^0)$ and $H+D(x^0+z_j)$. Affineness makes these checks sufficient for the asserted directions. The separate construction is useful protection against a shared sign or indexing error, but it is not a formal verification of the programming language or of Lemma~\ref{lem:commuting}.
+
+\subsection{Arithmetic size and limits of the reduction}
+There are $\binom{n+2}{3}-n$ mixed symmetric orbits and $n$ unknown diagonal entries. The system has $\binom n2^2$ rows, each with at most two nonzero coefficients. A direct construction of $c_H$ takes $O(n^5)$ arithmetic operations: there are $O(n^4)$ retained commutator entries, each containing a sum of $n$ products. This bound describes a simple implementation, not an optimal algorithm.
+
+The nullspace has a much smaller description, derived in the next section. Its Gram matrix can be assembled in $O(n^3)$ arithmetic operations without materializing $L_H$. Nevertheless, a fast nullspace calculation is not a substitute for checking the constant equations. Inputs with exactly the same nonzero graph pattern may differ in consistency because $c_H$ is quadratic in the observations.
+
+For an explicit bit-size bound, suppose each input rational has numerator and denominator with at most $b$ bits. Taking the product of all input denominators gives a common denominator $Q_0$ whose bit length is at most $Nb$, where $N=\binom{n+2}{3}-n$. Clearing denominators by $Q_0^2$ turns $[L_H\mid-c_H]$ into an integer matrix whose entries have bit length $O(Nb+\log n)$. Hadamard's inequality bounds any $k\times k$ minor by $k^{k/2}B^k$ when the entries have magnitude at most $B$. Cramer's rule then gives certificates with bit length polynomial in $n$ and $b$. This is a conservative bound; it does not claim that naive rational elimination attains the best bit complexity.
+
+A minimal inconsistent subsystem has at most $n+1$ equations. Indeed, take a maximal independent set of coefficient rows and add a row whose right side disagrees with their span. Its size is at most $n+1$, and the dependency yields~\eqref{eq:negative-cert}. The streaming producer retains precisely this type of linear-combination provenance rather than a dense $M\times M$ elimination matrix.
+
+The affine reduction is special to the missing coordinate diagonal. If several unknown entries occupy noncommuting slice positions, the last term in~\eqref{eq:comm-expand} need not vanish. The reduction also relies on a sufficient commutation criterion, which uses real symmetry. A system formed from arbitrary nonsymmetric slices or from general CP factors would not inherit Theorem~\ref{thm:affine} merely by using the same code.

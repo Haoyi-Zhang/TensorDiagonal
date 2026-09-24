@@ -1,0 +1,10 @@
+{
+  "distance_two_budget_one": {
+    "reason": "singular_restricted_system",
+    "status": "no_certificate"
+  },
+  "excessive_noise_bound": {
+    "reason": "noise_exceeds_certified_margin",
+    "status": "no_certificate"
+  }
+}

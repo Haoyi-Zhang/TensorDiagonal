@@ -1,0 +1,22 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,vertex/.style={circle,draw,minimum size=6mm,inner sep=1pt},pin/.style={rectangle,draw,minimum size=6mm,inner sep=1pt},every node/.style={font=\small}]
+\node[vertex] (a1) at (0,1.2) {$1$};
+\node[vertex] (a2) at (2.1,1.2) {$2$};
+\node[vertex] (a3) at (1.05,-.45) {$3$};
+\draw (a1)--node[above] {$g_{12}=1$}(a2);
+\draw (a1)--node[left] {$1$}(a3);
+\draw (a2)--node[right] {$1$}(a3);
+\node at (1.05,-1.2) {$(a)\quad z=(1,1,1)$};
+\node[vertex] (b1) at (5.2,1.2) {$1$};
+\node[vertex] (b2) at (7.3,1.2) {$2$};
+\node[vertex] (b3) at (6.25,-.45) {$3$};
+\node[pin] (b4) at (9.3,.45) {$4$};
+\draw (b1)--node[above] {$g_{12}=1$}(b2);
+\draw (b1)--node[left] {$1$}(b3);
+\draw (b2)--node[left] {$1$}(b3);
+\draw[densely dotted,-{Stealth[length=1.7mm]}] (b2)--(b4);
+\draw[densely dotted,-{Stealth[length=1.7mm]}] (b3)--(b4);
+\draw[densely dotted,rounded corners=1.5mm,-{Stealth[length=1.7mm]}] (b1.north) -- (5.2,1.9) -- (9.3,1.9) -- (b4.north);
+\node[align=center] at (9.5,-.6) {pinned\\$z_4=0$};
+\node at (6.7,-1.2) {$(b)\quad z=(1,1,1,0)$};
+\end{tikzpicture}

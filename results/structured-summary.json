@@ -1,0 +1,12 @@
+{
+  "additional_ambiguous_case": 1,
+  "cauchy_cases": 42,
+  "cpu_seconds": 3.920468926,
+  "distance_cases": 36,
+  "failures": 0,
+  "generic_rigid_witnesses": 10,
+  "instances": 94,
+  "peak_rss_kib": 97332,
+  "rigid_cases": 5,
+  "wall_seconds": 3.9244881140000416
+}

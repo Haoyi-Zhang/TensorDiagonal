@@ -1,0 +1,10 @@
+{
+  "cpu_seconds": 5.439519871,
+  "failures": 0,
+  "instances": 36,
+  "negative_controls": 2,
+  "peak_rss_kib": 106672,
+  "same_as_unit_amplitude": 36,
+  "verified": 36,
+  "wall_seconds": 5.443154529999902
+}

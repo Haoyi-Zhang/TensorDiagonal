@@ -1,0 +1,168 @@
+\section{Ambiguity supports and exact correction}\label{sec:graph}
+\subsection{The energy identity}
+For distinct indices, put
+\[
+ a_{ij}=H_{iij},\qquad h_{ijk}=H_{ijk}\quad(i,j,k\text{ all distinct}).
+\]
+The two directed quantities $a_{ij}$ and $a_{ji}$ are different observations. In particular, $a_{ji}=H_{ijj}$, not $H_{iij}$.
+
+\begin{lemma}[Kernel energy]\label{lem:energy}
+For every real mixed symmetric $H$ and $z\in\R^n$,
+\begin{equation}\label{eq:energy}
+ \norm{L_Hz}^2
+ =\sum_{i<j}(a_{ji}z_i+a_{ij}z_j)^2
+ +2\sum_{i<j<k}h_{ijk}^2(z_i^2+z_j^2+z_k^2).
+\end{equation}
+Consequently $L_Hz=0$ exactly when
+\begin{align}
+ a_{ji}z_i+a_{ij}z_j&=0 &&(i<j),\label{eq:pair-kernel}\\
+ h_{ijk}z_i=h_{ijk}z_j=h_{ijk}z_k&=0 &&(i<j<k).\label{eq:triple-kernel}
+\end{align}
+\end{lemma}
+\begin{proof}
+In the commutator for a fixed pair $i,j$, a row with $\{p,q\}=\{i,j\}$ contributes $a_{ji}z_i+a_{ij}z_j$. If exactly one of $p,q$ lies in $\{i,j\}$ and the other index is $k\notin\{i,j\}$, the row contributes, up to sign, either $h_{ijk}z_i$ or $h_{ijk}z_j$. Rows with neither index in $\{i,j\}$ are zero in $L_H$. Over the three slice pairs drawn from a triple $i,j,k$, each of $h_{ijk}z_i$, $h_{ijk}z_j$, and $h_{ijk}z_k$ appears twice. Squaring and summing gives~\eqref{eq:energy}. A sum of real squares vanishes exactly when every summand vanishes.
+\end{proof}
+
+Writing $G_H=L_H^\top L_H$, the identity gives
+\begin{align}
+ (G_H)_{ii}&=\sum_{j\ne i}a_{ji}^2
+       +2\sum_{\{j,k\}\subseteq[n]\setminus\{i\}}h_{ijk}^2,\label{eq:gram}\\
+ (G_H)_{ij}&=a_{ij}a_{ji}\quad(i\ne j).\nonumber
+\end{align}
+The off-diagonal sign is a plus. In the graph relation below the gain has a minus sign because~\eqref{eq:pair-kernel} is solved for one coordinate. Confusing these signs changes the classification of cycles.
+
+\subsection{A graph with pins and multiplicative gains}
+Construct an undirected graph on $[n]$. If $a_{ij}$ and $a_{ji}$ are both nonzero, insert an edge and assign the directed gain
+\begin{equation}\label{eq:gain}
+ g_{ij}=-\frac{a_{ji}}{a_{ij}},\qquad g_{ji}=g_{ij}^{-1}.
+\end{equation}
+The edge equation is $z_j=g_{ij}z_i$. If $a_{ji}\ne0$ but $a_{ij}=0$, pin vertex $i$ to zero. If $a_{ij}\ne0$ but $a_{ji}=0$, pin vertex $j$. Finally, a nonzero all-distinct entry pins all three of its vertices.
+
+A connected component is \emph{balanced} when every directed cycle has gain product one. A component is \emph{free} when it is balanced and contains no pinned vertex. Isolated unpinned vertices count as free components. Denote their collection by $\calC(H)$.
+
+\begin{theorem}[Disjoint-support nullspace]\label{thm:graph}
+Each free component $C$ has a vector $z_C$ supported exactly on $C$, unique up to a nonzero scalar, obtained by propagating one nonzero root value along edge gains. The vectors $z_C$ form a basis of $\ker L_H$. In particular,
+\begin{equation}\label{eq:graph-null}
+ \dim\ker L_H=|\calC(H)|,
+ \qquad
+ \supp\!\left(\sum_C\alpha_Cz_C\right)
+ =\bigcup_{\alpha_C\ne0}C.
+\end{equation}
+This assertion holds even when $\calF(H)$ is empty.
+\end{theorem}
+\begin{proof}
+In a connected component, an edge relates two coordinates by a nonzero factor. A pin therefore forces the entire component to zero. If a cycle has gain product different from one, propagating around that cycle gives $z_i=gz_i$ with $g\ne1$, again forcing zero on the whole component.
+
+On a balanced unpinned component, fix a root value one and propagate along paths. Two paths give the same value because their concatenation is a closed walk, whose gain product is one. Every propagated coordinate is nonzero, and all edge equations hold. No pin or triple condition remains on the component. Conversely, every solution of the kernel equations must equal this propagated vector times its root coordinate. Components have disjoint vertex sets, so their nonzero vectors are independent and account for all solutions. Disjointness also prevents cancellation between nonzero component coefficients, proving the support formula.
+\end{proof}
+
+The graph is not a graphical model of latent-variable dependence. Its vertices are observed diagonal coordinates; its edges express ratios between possible changes of those coordinates. It can be computed before choosing any particular completion or any orthogonal factors. A breadth-first traversal needs only one scalar per vertex and checks each non-tree edge for consistency.
+
+\begin{figure}[t]
+\centering
+\input{figures/component-structure.tex}
+\caption{Two ambiguity structures. On the left, a balanced three-coordinate component has one direction supported on all three vertices, so its distance is three. On the right, an anchor is pinned by one-sided pair entries while the original three-coordinate component stays free. This is the distance-three construction in dimension four. Solid edges carry nonzero reciprocal gains; dotted arrows represent pinning information, not equality constraints. The graph describes diagonal changes, not causal relationships.}\label{fig:components}
+\end{figure}
+
+
+\subsection{Generic uniqueness and the low-dimensional boundary}
+The graph also separates structured nonuniqueness from typical parameter choices.  The following statement concerns the parameterized odeco model, not an arbitrary distribution on mixed observations.
+
+\begin{theorem}[Dimension threshold for generic mixed identifiability]\label{thm:generic-rigidity}
+Let $1\le r\le n$, let $U=[u_1\ \cdots\ u_r]$ have Haar distribution on the Stiefel manifold, and let $\lambda\in\R^r$ be independent of $U$ with a distribution absolutely continuous with respect to Lebesgue measure.  Form
+\[
+ T=\sum_{a=1}^r\lambda_a u_a^{\otimes3}
+\]
+and let $H$ be its mixed part.  If $n\le2$, every nonempty fiber $\calF(H)$ has positive dimension.  If $n\ge3$, then
+\[
+ \Pr\{\calF(H)=\{(T_{111},\ldots,T_{nnn})\}\}=1.
+\]
+\end{theorem}
+\begin{proof}
+For $n=1$, $L_H$ has no rows.  For $n=2$, there is only one slice-pair diagonal equation, so $\rank L_H\le1<n$; a consistent fiber cannot be a singleton.
+
+Now let $n\ge3$.  Fix $i<j<k$.  Almost surely the first Haar column has no zero coordinate, hence the coefficient vector
+$((u_a)_i(u_a)_j(u_a)_k)_{a=1}^r$ is nonzero.  Conditional on such a $U$, the equation
+$T_{ijk}=0$ is one proper hyperplane in $\lambda$ and therefore has probability zero.  A finite union over triples shows that every all-distinct entry is nonzero almost surely.  Every vertex belongs to at least one triple, so~\eqref{eq:triple-kernel} pins every coordinate of $\ker L_H$ to zero.  The diagonal of $T$ supplies consistency; hence the fiber is the asserted singleton.
+\end{proof}
+
+Thus the Cauchy components classified below form exceptional algebraic geometry rather than a generic failure mode.  They remain essential: the theorem is almost-sure, whereas the exact certificate must handle every observation, including those exceptional fibers and inconsistent arrays.
+
+\subsection{Uniform identifiability under a support family}
+For a nonempty fiber, define its diagonal distance by
+\begin{equation}\label{eq:distance}
+ d(H)=\min\{\norm{z}_0:0\ne z\in\ker L_H\},
+ \qquad \norm{z}_0=|\supp z|,
+\end{equation}
+with $d(H)=\infty$ when the kernel is zero. Theorem~\ref{thm:graph} gives $d(H)=\min_{C\in\calC(H)}|C|$. This minimum is over actual tensor ambiguities, not only a linearized model.
+
+\begin{theorem}[Exact support criterion]\label{thm:correction}
+Suppose $\calF(H)\ne\varnothing$ and let $\calS$ be a nonempty family of allowed support sets. The clean completion in~\eqref{eq:exact-model} is unique for every $x^*\in\calF(H)$ and every allowed error if and only if
+\begin{equation}\label{eq:support-condition}
+ C\not\subseteq S\cup S'
+ \quad\text{for every }C\in\calC(H)\text{ and }S,S'\in\calS.
+\end{equation}
+For at most $s$ unknown errors this is equivalent to $d(H)>2s$. For known erasures in a set $S$, it is equivalent to no free component being contained in $S$.
+\end{theorem}
+\begin{proof}
+If two explanations yield the same observation, write $d=x+e=x'+e'$ with $x,x'\in\calF(H)$. Then $z=x'-x=e-e'$ belongs to $\ker L_H$ and is supported in $S\cup S'$ for allowed supports $S,S'$. If $z\ne0$, its support contains an entire free component by~\eqref{eq:graph-null}, contradicting~\eqref{eq:support-condition}.
+
+Conversely, let a free component $C$ lie in $S\cup S'$ and choose a nonzero direction $z$ supported on $C$. Split $C$ into disjoint sets $A\subseteq S$ and $B\subseteq S'$. Put $e=z$ on $A$ and zero elsewhere, and put $e'=-z$ on $B$ and zero elsewhere. Then $e-e'=z$. For any $x\in\calF(H)$, both $x$ and $x'=x+z$ are completions and satisfy $x+e=x'+e'$. Thus uniform uniqueness fails.
+
+A set of size at most $2s$ can be partitioned into two sets of size at most $s$, and no union of two such sets has more than $2s$ elements. This proves the cardinality criterion. For known erasures, two completions are indistinguishable precisely when their difference is supported in $S$, which proves the last claim.
+\end{proof}
+
+The distinction between known and unknown supports costs a factor of two because the two competing explanations may use different supports. The theorem also covers $s=0$, $n=1$, and a zero-dimensional fiber. When $d(H)=\infty$, mixed entries alone determine the tensor and any number of diagonal entries may be corrupted.
+
+\begin{corollary}[Full-rank ambiguities persist]\label{cor:fullrank}
+If a fiber contains a full-rank tensor and condition~\eqref{eq:support-condition} fails, uniform identifiability also fails when competing tensors are restricted to full rank.
+\end{corollary}
+\begin{proof}
+Let $x$ represent a full-rank completion and let $z$ be the ambiguity direction used in the converse proof. A nonzero $n\times n$ unfolding minor remains nonzero for all sufficiently small perturbations $x+\tau z$. Take $\tau\ne0$ in that neighborhood. Both tensors are odeco by Theorem~\ref{thm:affine}, so their unfolding rank equals their tensor rank by Lemma~\ref{lem:unique-factors}. Splitting $\tau z$ into the two errors gives the same indistinguishability construction.
+\end{proof}
+
+\subsection{Pointwise decoding and finite or infinite lists}
+Uniform correction is a worst-case statement. For a particular reported diagonal $d$, useful recovery may be possible even when the worst-case distance condition fails. Fix a particular solution $x^0$ and the basis $z_C$. Coordinates outside the union of free components are rigid. Let
+\begin{align}
+ b&=\big|\{i\notin\bigcup_C C:d_i\ne x^0_i\}\big|,\label{eq:rigid-errors}\\
+ \rho_i&=(d_i-x^0_i)/(z_C)_i\quad(i\in C),\label{eq:ratios}\\
+ \nu_C(\rho)&=|\{i\in C:\rho_i=\rho\}|,\qquad
+ M_C=\max_\rho\nu_C(\rho).\label{eq:frequency}
+\end{align}
+The denominator in~\eqref{eq:ratios} is never zero. An arbitrary completion has the form $x^0+\sum_C\alpha_Cz_C$. Its disagreement count with $d$ is
+\begin{equation}\label{eq:disagreement}
+ b+\sum_C\big(|C|-\nu_C(\alpha_C)\big),
+\end{equation}
+where $\nu_C(\alpha)=0$ for an unobserved ratio.
+
+\begin{theorem}[Pointwise list formula]\label{thm:list}
+Let $\calF(H)\ne\varnothing$. The minimum number of diagonal changes needed to reach a completion is
+\begin{equation}\label{eq:minimum-errors}
+ m_0=b+\sum_C(|C|-M_C).
+\end{equation}
+The minimizing completions are obtained by choosing a modal ratio independently on each free component. Their number is the product of the numbers of distinct modal ratios.
+
+If there is at least one free component, the list of completions within $s$ changes is infinite exactly when
+\begin{equation}\label{eq:infinite-threshold}
+ s\ge m_0+\min_C M_C.
+\end{equation}
+Below this threshold, its size is zero for $s<m_0$ and otherwise equals the sum of coefficients of degrees at most $s-m_0$ in
+\begin{equation}\label{eq:list-polynomial}
+ \prod_{C\in\calC(H)}
+ \left(\sum_{\rho:\nu_C(\rho)>0}q^{M_C-\nu_C(\rho)}\right).
+\end{equation}
+If there are no free components, the list contains the single completion exactly when $s\ge b$.
+\end{theorem}
+\begin{proof}
+Formula~\eqref{eq:disagreement} is separable in the component parameters. Minimizing each term maximizes its frequency, proving~\eqref{eq:minimum-errors} and the modal count. An unobserved value of $\alpha_C$ costs $|C|$ errors on component $C$, which is $M_C$ more than its minimum. There are infinitely many unobserved real values. Choosing modal values on the other components proves sufficiency of~\eqref{eq:infinite-threshold}.
+
+Conversely, below that threshold no component parameter can be unobserved, since this alone costs at least $m_0+M_C$ errors. Each parameter is then drawn from a finite set. A choice of an observed ratio contributes excess cost $M_C-\nu_C(\rho)$. Multiplying the generating polynomials counts every tuple of choices with its total excess cost. Distinct tuples give distinct completions because the component directions are independent. This proves the finite count and also the necessity of the infinity criterion. With no free components there is only $x^0$.
+\end{proof}
+
+The formulas are invariant to rescaling a direction or changing the particular solution: these operations merely apply an invertible affine change to the ratios on each component. Exact equality of ratios is appropriate to the noiseless model. It is not a tolerance rule for sampled moments; bounded perturbations require a separate argument.
+
+A useful baseline distinction is between counts and coordinate-weighted fitting. On a component with $z=(100,1,1)$ and ratios $(2,1,1)$, the modal parameter is $1$. Ordinary absolute diagonal residuals minimize
+\[
+ 100|\alpha-2|+|\alpha-1|+|\alpha-1|,
+\]
+whose minimizer is $2$. Normalizing each residual by $|z_i|$ restores the unweighted median. This example isolates the effect of direction scaling; it is not evidence of a performance advantage over a general robust tensor method.

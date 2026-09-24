@@ -1,0 +1,179 @@
+\section{A posterior certificate with bounded mixed noise}\label{sec:stability}
+Exact equality of measured mixed entries is a strong assumption. We now allow a bounded perturbation in those entries and a bounded error on the otherwise clean diagonal coordinates. Gross diagonal errors still have no amplitude bound. The certificate is conditional: it bounds every true tensor satisfying a declared observation model, but does not establish that such a tensor exists.
+
+\subsection{Observation uncertainty and a restricted margin}
+Suppose the observed mixed tensor is $\widehat H$, and the reported diagonal is $d$. A compatible truth satisfies
+\begin{align}
+ T^*&=H^*+D(x^*)\in\odeco,\qquad
+ \widehat H=H^*+E,\quad P_{\rm mix}E=E,\quad \norm E_F\le\delta,\label{eq:noisy-mixed}\\
+ d&=x^*+e+v,\qquad |\supp e|\le s,\quad \norm v\le\epsilon.\label{eq:noisy-diag}
+\end{align}
+The numbers $\delta,\epsilon\ge0$ are supplied deterministic bounds. They are not estimated confidence levels. The perturbation $E$ is symmetric because both mixed tensors are symmetric.
+
+Let an arbitrary candidate procedure return $\widehat x\in\R^n$ and a candidate gross-error support $\widehat S$ with $|\widehat S|\le s$. The theorem below does not require that this procedure minimize an objective. Write
+\begin{equation}\label{eq:noisy-residuals}
+ r=\norm{L_{\widehat H}\widehat x+c_{\widehat H}},
+ \qquad e_0=\norm{P_{\widehat S^c}(d-\widehat x)}.
+\end{equation}
+Here $P_A$ restricts a vector to coordinates in $A$. Define the restricted margin
+\begin{equation}\label{eq:beta}
+ \beta=\min_{S\subseteq[n],\ |S|\le s}
+ \sigma_{\min}\!\begin{pmatrix}
+ L_{\widehat H}\\ P_{(S\cup\widehat S)^c}
+ \end{pmatrix}.
+\end{equation}
+The minimum includes every possible true gross-error support. Its second block retains only coordinates clean under both the true and candidate explanations. This is why a support union, rather than the candidate support alone, appears in the certificate.
+
+A singular mixed-only operator need not make $\beta$ zero. On a distance-three fiber with $s=1$, any union of two allowed singleton supports leaves a clean coordinate on the free component. That coordinate fixes its free parameter. Conversely, if a free component fits inside such a union, the corresponding restricted operator has a nonzero kernel and no positive margin is possible in the exact model.
+
+\subsection{Perturbing the completion equations}
+\begin{lemma}[Perturbing the coefficients]\label{lem:perturbation}
+For mixed symmetric cubics $A,E$,
+\begin{align}
+ \norm{L_E}_{2\to2}&\le\norm E_F,\label{eq:l-perturb}\\
+ \norm{c_{A+E}-c_A}&\le2\norm A_F\norm E_F+\norm E_F^2.\label{eq:c-perturb}
+\end{align}
+\end{lemma}
+\begin{proof}
+Apply the energy identity to $E$. For each pair,
+\[
+ (E_{ijj}z_i+E_{iij}z_j)^2
+ \le(E_{ijj}^2+E_{iij}^2)(z_i^2+z_j^2)
+ \le(E_{ijj}^2+E_{iij}^2)\norm z^2.
+\]
+For each triple, its term is at most $2E_{ijk}^2\norm z^2$. The full Frobenius norm of $E$ counts each pair orbit three times and each all-distinct orbit six times. Summing proves~\eqref{eq:l-perturb}, with a deliberately conservative constant.
+
+For the second inequality, retain all ordered slice pairs and all matrix entries temporarily. A family of skew matrices $B_{ij}$ with $B_{ji}=-B_{ij}$ has full squared norm four times the squared norm of its entries with $i<j,p<q$. Thus restriction to our independent entries divides its norm by two. The bilinear family $[A_i,E_j]$ has norm at most $2\norm A_F\norm E_F$, since
+\[
+ \sum_{i,j}\norm{[A_i,E_j]}_F^2
+ \le4\sum_{i,j}\norm{A_i}_F^2\norm{E_j}_F^2.
+\]
+The cross family $[A_i,E_j]+[E_i,A_j]$ therefore has full norm at most $4\norm A_F\norm E_F$, by the triangle inequality. It has the required skew symmetries, so its restricted norm is at most $2\norm A_F\norm E_F$. The family $[E_i,E_j]$ similarly has restricted norm at most $\norm E_F^2$. Expanding the commutator of $A+E$ gives~\eqref{eq:c-perturb}.
+\end{proof}
+
+The constants use the full tensor Frobenius norm. A norm on a list of distinct symmetric orbits without their multiplicities would not satisfy the same statement without adjustment. The implementation expands the symmetric array when calculating these norms.
+
+\begin{theorem}[Conditional posterior radius]\label{thm:posterior}
+Assume~\eqref{eq:noisy-mixed}--\eqref{eq:noisy-diag}. Let $\gamma$ be any certified lower bound on $\beta$ in~\eqref{eq:beta}, with $\gamma>\delta$. Define
+\begin{equation}\label{eq:ab}
+ A=r+\delta(\norm{\widehat x}+2\norm{\widehat H}_F)+\delta^2,
+ \qquad B=e_0+\epsilon.
+\end{equation}
+Then every compatible truth satisfies
+\begin{equation}\label{eq:posterior}
+ \norm{\widehat x-x^*}\le
+ R:=\frac{\sqrt{A^2+B^2}}{\gamma-\delta},
+ \qquad
+ \norm{\widehat H+D(\widehat x)-T^*}_F
+ \le\sqrt{\delta^2+R^2}.
+\end{equation}
+No bound on $\norm e$ is required.
+\end{theorem}
+\begin{proof}
+Let $S^*=\supp e$ and $w=\widehat x-x^*$. Since $x^*$ is a completion of $H^*$, its exact residual is zero. Linearity of $L_H$ in $H$ and Lemma~\ref{lem:perturbation}, applied with $A=\widehat H$ and perturbation $-E$, give
+\begin{align*}
+ \norm{L_{\widehat H}x^*+c_{\widehat H}}
+ &\le\norm{L_E x^*}+\norm{c_{\widehat H}-c_{H^*}}\\
+ &\le\delta\norm{x^*}+2\delta\norm{\widehat H}_F+\delta^2.
+\end{align*}
+Subtracting the candidate residual yields
+\[
+ \norm{L_{\widehat H}w}
+ \le r+\delta\norm{x^*}+2\delta\norm{\widehat H}_F+\delta^2
+ \le A+\delta\norm w.
+\]
+On coordinates outside $S^*\cup\widehat S$, the gross error is absent and $d-x^*=v$. Therefore
+\[
+ \norm{P_{(S^*\cup\widehat S)^c}w}
+ \le\norm{P_{\widehat S^c}(\widehat x-d)}+\norm v
+ \le B.
+\]
+By the restricted margin, these two bounds imply
+\[
+ \gamma\norm w\le\sqrt{(A+\delta\norm w)^2+B^2}
+ \le\sqrt{A^2+B^2}+\delta\norm w.
+\]
+The last step is the Euclidean triangle inequality in $\R^2$. Rearranging uses $\gamma>\delta$ and gives the first radius. The mixed and pure-diagonal tensor subspaces are orthogonal under the full Frobenius inner product, so the total squared error is $\norm E_F^2+\norm w^2$. This proves the second radius.
+\end{proof}
+
+The candidate tensor itself need not be odeco. A successful certificate bounds the distance from that candidate to every compatible odeco truth. It does not convert an approximately commuting tensor into an exactly commuting one. If two truths satisfy the same observation bounds, their tensor distance is at most twice the total radius by the triangle inequality. This is a deterministic identifiability-diameter statement, not a posterior probability distribution.
+
+The proof uses no separation between component weights. It also gives no direct factor-error bound. Translating a tensor radius into stable individual factors requires additional quantitative hypotheses, especially near a rank drop. Those hypotheses should not be inferred from a successful diagonal certificate.
+
+\subsection{Rational witnesses for the margin}
+For rational observations, form the rational positive semidefinite matrices
+\begin{equation}\label{eq:restricted-gram}
+ M_S=L_{\widehat H}^\top L_{\widehat H}
+       +\diag\big(\one_{i\notin S\cup\widehat S}\big)_{i=1}^n.
+\end{equation}
+A witness consists of a rational inverse $B_S$ for every $S$ with $|S|\le s$. The verifier checks $M_SB_S=I$ exactly. Since $M_S$ is already known to be positive semidefinite, invertibility makes it positive definite; its inverse has positive eigenvalues. Hence
+\begin{equation}\label{eq:trace-bound}
+ \lambda_{\min}(M_S)
+ =\lambda_{\max}(M_S^{-1})^{-1}
+ \ge\frac{1}{\tr(M_S^{-1})}.
+\end{equation}
+Any rational $\gamma>0$ satisfying
+\begin{equation}\label{eq:gamma-cert}
+ \gamma^2\tr(B_S)\le1\quad\text{for all }|S|\le s
+\end{equation}
+is a verified lower bound on $\beta$. The trace bound can be conservative, but its validity does not depend on a numerical eigensolver.
+
+The remaining norms in~\eqref{eq:ab} can be bounded by rational upper values. For a nonnegative rational $a$, choose an integer $k$ so $(k/2^b)^2\le a<((k+1)/2^b)^2$ using integer square roots. The upper dyadic endpoint bounds $\sqrt a$; the lower endpoint can be used for a positive margin. With upper bounds $\bar r,\bar e_0,\bar n_x,\bar n_H$, the verifier checks nonnegativity, their squared inequalities, and
+\begin{equation}\label{eq:radius-check}
+ \bar R^2(\gamma-\delta)^2\ge
+ [\bar r+\delta(\bar n_x+2\bar n_H)+\delta^2]^2
+ +(\bar e_0+\epsilon)^2.
+\end{equation}
+Together with a squared total-radius check, these are exact rational comparisons. The unknown truth is not an input to this verifier.
+
+Enumerating supports costs $\sum_{k=0}^s\binom nk$ inverse witnesses. This is not polynomial in unrestricted $s$. Our implementation explicitly caps that enumeration at 2,048 supports and the dimension at 16, while the theorem itself is not so bounded. For larger instances, a different certified lower bound on~\eqref{eq:beta} would be needed; silently omitting support sets would invalidate the certificate.
+
+
+\subsection{A quantitative connection to the graph}
+The graph decides whether a restricted margin is positive. It also separates two reasons why that margin can be small: weak control transverse to the fiber, and a retained coordinate with a small entry in its component direction. The following elementary bound makes this separation explicit. It is a conditioning consequence, not a replacement for checking consistency.
+
+\begin{proposition}[A graph-based margin bound]\label{prop:graph-margin}
+Suppose $0<\rank L_H<n$, and let $\tau$ be its smallest nonzero singular value. Let $A\subseteq[n]$ meet every free component and define
+\begin{equation}\label{eq:alpha-margin}
+ \alpha=\min_{C\in\calC(H)}
+ \frac{\norm{P_Az_C}}{\norm{z_C}}>0.
+\end{equation}
+Then
+\begin{equation}\label{eq:graph-margin}
+ \sigma_{\min}\!\begin{pmatrix}L_H\\P_A\end{pmatrix}
+ \ge \frac{\alpha\tau}{\sqrt{\tau^2+1+\alpha^2}}.
+\end{equation}
+If $\ker L_H=\{0\}$, the simpler lower bound $\sigma_{\min}(L_H)$ applies. If $L_H=0$, the stacked operator is nonsingular exactly when $A=[n]$, in which case its margin is one.
+\end{proposition}
+\begin{proof}
+Write any vector as $v=p+q$, with $p\in\ker L_H$ and $q\perp\ker L_H$. Put $a=\norm{L_Hv}$ and $b=\norm{P_Av}$. The definition of $\tau$ gives $\norm q\le a/\tau$. Disjoint supports make the component directions orthogonal, before and after restriction. Hence $\norm{P_Ap}\ge\alpha\norm p$, so
+\[
+ \norm p\le \frac{b+\norm q}{\alpha}
+ \le\frac{b}{\alpha}+\frac{a}{\alpha\tau}.
+\]
+Orthogonality of $p,q$ and the Frobenius bound on a matrix's operator norm imply
+\begin{align*}
+ \norm v^2
+ &\le\left(\frac{a}{\alpha\tau}+\frac{b}{\alpha}\right)^2
+       +\frac{a^2}{\tau^2}\\
+ &\le\left(\frac{1}{\alpha^2\tau^2}
+           +\frac{1}{\alpha^2}+\frac{1}{\tau^2}\right)(a^2+b^2).
+\end{align*}
+Rearrange and minimize over unit $v$ to obtain~\eqref{eq:graph-margin}. The two degenerate cases follow directly from the definition of the stacked operator.
+\end{proof}
+
+For the three-coordinate example, the nonzero eigenvalues of $G_H$ are six and twelve. Retaining a single coordinate gives $\alpha=1/\sqrt3$ and $\tau=\sqrt6$, hence the squared lower margin $3/11$. The direct inverse witnesses in Appendix~\ref{app:worked} give the slightly larger bound $24/85$. These are two independently justified lower bounds, not competing estimates of an unknown experimental quantity.
+
+Component size alone does not control $\alpha$. A full-support direction can have one coordinate arbitrarily small relative to its norm. A retained coordinate at that position determines the component parameter exactly in the noiseless model, while providing weak Euclidean control under noise. Likewise, small mixed coefficients can reduce $\tau$ without changing any edge support. This explains why the exact threshold depends only on support containment but the posterior radius needs quantitative coefficients. For a support-union certificate, the bound must hold for every retained set, not only for a favorable one.
+
+\subsection{Candidate generation and negative outcomes}
+For the small validation instances, the candidate is obtained by exhaustively solving a least-squares problem for each possible discarded support:
+\begin{equation}\label{eq:trimmed-ls}
+ \min_{|S|\le s}\ \min_x
+ \norm{L_{\widehat H}x+c_{\widehat H}}^2+\norm{P_{S^c}(d-x)}^2.
+\end{equation}
+Each nonsingular normal equation is solved with rational arithmetic. Singular cases are skipped by this candidate routine; the posterior verifier remains separate. The success of the certificate depends on its residual and margin, not on a claim that this exhaustive method scales well.
+
+There are two informative ways to fail certification. A singular restricted matrix witnesses the absence of a positive margin for that support union. Even if every matrix is invertible, the conservative lower margin may not exceed the declared mixed-noise bound. Neither outcome proves that the observed tensor is incompatible with the model. Conversely, a small residual alone is not a substitute for either a positive margin or the existence assumption.
+
+At zero mixed noise, the restricted margin recovers the exact obstruction. For a consistent $H$, a particular $M_S$ is singular precisely when there is a nonzero $z\in\ker L_H$ supported inside $S\cup\widehat S$. Theorem~\ref{thm:graph} makes this equivalent to containment of a free component. Thus the noisy theorem is anchored in the same support geometry as exact correction, rather than in a separate heuristic condition.
