@@ -245,9 +245,11 @@ def main():
         # campaign creates many short-lived Fraction objects; process
         # isolation releases them deterministically before the next suite and
         # avoids allocator/collector interactions in the documented command.
-        # This is sequential execution, not a worker pool.
+        # The -S flag keeps child execution on the declared standard-library-only
+# dependency surface and avoids inheriting host-specific site hooks.
+# This is sequential execution, not a worker pool.
         for suite in SUITES:
-            subprocess.run([sys.executable,str(Path(__file__).resolve()),'--suite',suite,'--out',str(args.out)],check=True)
+            subprocess.run([sys.executable,'-S',str(Path(__file__).resolve()),'--suite',suite,'--out',str(args.out)],check=True)
         return
     suite=args.suite
     temp=args.out/('.'+suite+'-working');temp.mkdir(exist_ok=True)

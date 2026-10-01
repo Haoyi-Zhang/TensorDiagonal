@@ -45,10 +45,10 @@
       "unique": 444
     }
   },
-  "cpu_seconds": 24.501475549,
+  "cpu_seconds": 23.636407535,
   "failures": 0,
   "instances": 83348,
   "maximum_completion_coefficient_bits": 3,
-  "peak_rss_kib": 95408,
-  "wall_seconds": 24.517628611999953
+  "peak_rss_kib": 95404,
+  "wall_seconds": 23.639874830999815
 }

@@ -39,7 +39,8 @@
     "distance_realizations": {
         "n_min": 1,
         "n_max": 8,
-        "distances": "all integers 1 through n"
+        "distances": "all integers 1 through n",
+        "instances": 36
     },
     "cauchy_family": {
         "n_min": 2,
@@ -53,7 +54,8 @@
             0,
             1,
             2
-        ]
+        ],
+        "instances": 42
     },
     "generic_rigid_witnesses": {
         "n_min": 3,
@@ -61,7 +63,8 @@
         "orthogonal_factors": "rational Householder matrix from vector (1,...,n)",
         "weights": "1,2,4,...,2^(n-1)",
         "obligation": "every all-distinct entry nonzero; exact mixed fiber unique",
-        "interpretation": "deterministic mechanism witnesses, not evidence for the almost-sure theorem"
+        "interpretation": "deterministic mechanism witnesses, not evidence for the almost-sure theorem",
+        "instances": 10
     },
     "noise": {
         "dimension_budget_pairs": [
@@ -97,7 +100,10 @@
             1,
             2
         ],
-        "support": "first s coordinates"
+        "support": "first s coordinates",
+        "distinct_dimension_noise_configurations": 9,
+        "gross_amplitudes_per_configuration": 4,
+        "instances": 36
     },
     "negative_controls": [
         "distance 2 with budget 1",
@@ -108,5 +114,47 @@
         "implementation_max_n": 16,
         "implementation_max_supports": 2048
     },
-    "interpretation": "Finite algebraic validation and deliberately constructed stress cases, not application workload breadth or a statistical test set."
+    "interpretation": "Finite algebraic validation and deliberately constructed stress cases, not application workload breadth or a statistical test set.",
+    "householder_recovery": {
+        "n_min": 3,
+        "n_max": 8,
+        "orthogonal_factors": "rational Householder matrix from vector (1,...,n)",
+        "weights": "1,2,...,n",
+        "ambiguous_dimension": 3,
+        "rigid_dimensions": "4 through 8",
+        "instances": 6
+    },
+    "structured_expected_instances": 94,
+    "decoding": {
+        "fixed_fibers": 2,
+        "first_dimension": 3,
+        "first_free_supports": [
+            [
+                0,
+                1,
+                2
+            ]
+        ],
+        "second_dimension": 5,
+        "second_free_supports": [
+            [
+                0,
+                1
+            ],
+            [
+                2,
+                3
+            ],
+            [
+                4
+            ]
+        ],
+        "observation_alphabet": [
+            -1,
+            0,
+            1
+        ],
+        "words": 270,
+        "budget_checks": 1566
+    }
 }
