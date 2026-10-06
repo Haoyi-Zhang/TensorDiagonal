@@ -25,11 +25,15 @@ class SavedResultRegressions(unittest.TestCase):
         cls.noise_summary = json.loads((ROOT / 'results' / 'noise-summary.json').read_text())
         cls.decoding = json.loads((ROOT / 'results' / 'decoding.json').read_text())
         cls.decoding_summary = json.loads((ROOT / 'results' / 'decoding-summary.json').read_text())
+        cls.mutations = json.loads((ROOT / 'results' / 'mutations.json').read_text())
+        cls.mutation_summary = json.loads((ROOT / 'results' / 'mutations-summary.json').read_text())
+        cls.negative = json.loads((ROOT / 'results' / 'negative-controls.json').read_text())
 
     @classmethod
     def tearDownClass(cls):
         import gc
-        for name in ('structured', 'structured_summary', 'noise', 'noise_rows', 'noise_summary', 'decoding', 'decoding_summary'):
+        for name in ('structured', 'structured_summary', 'noise', 'noise_rows', 'noise_summary', 'decoding', 'decoding_summary',
+                     'mutations', 'mutation_summary', 'negative'):
             if hasattr(cls, name):
                 delattr(cls, name)
         gc.collect()
@@ -124,6 +128,41 @@ class SavedResultRegressions(unittest.TestCase):
         first['case'], second['case'] = second['case'], first['case']
         with self.assertRaisesRegex(ValueError, 'decoding (observation|budget list) mismatch'):
             check.check_decoding_records(wrong_labels, self.decoding_summary)
+
+    def test_mutation_case_coverage_flags_and_summary(self):
+        posterior = next(record['certificate'] for record in self.noise
+                         if record['case'] == 'noise-3-1-10-1')
+        check.check_mutation_records(self.mutations, posterior, self.mutation_summary)
+        duplicate = copy.deepcopy(self.mutations)
+        duplicate[-1] = copy.deepcopy(duplicate[0])
+        with self.assertRaisesRegex(ValueError, 'mutation case set mismatch'):
+            check.check_mutation_records(duplicate, posterior, self.mutation_summary)
+        unknown = copy.deepcopy(self.mutations)
+        unknown[-1]['case'] = 'unperformed-control'
+        with self.assertRaisesRegex(ValueError, 'mutation case set mismatch'):
+            check.check_mutation_records(unknown, posterior, self.mutation_summary)
+        truthy = copy.deepcopy(self.mutations)
+        truthy[-1]['rejected'] = 'False'
+        with self.assertRaisesRegex(ValueError, 'mutation rejection flags'):
+            check.check_mutation_records(truthy, posterior, self.mutation_summary)
+        summary = dict(self.mutation_summary, rejected=9)
+        with self.assertRaisesRegex(ValueError, 'mutation summary mismatch'):
+            check.check_mutation_records(self.mutations, posterior, summary)
+
+    def test_negative_controls_require_refusal_status_and_premises(self):
+        check.check_negative_controls(self.negative)
+        success = copy.deepcopy(self.negative)
+        success['distance_two_budget_one']['status'] = 'conditional_bound'
+        with self.assertRaisesRegex(ValueError, 'negative-control status/reason mismatch'):
+            check.check_negative_controls(success)
+        wrong_reason = copy.deepcopy(self.negative)
+        wrong_reason['excessive_noise_bound']['reason'] = 'singular_restricted_system'
+        with self.assertRaisesRegex(ValueError, 'negative-control status/reason mismatch'):
+            check.check_negative_controls(wrong_reason)
+        missing = copy.deepcopy(self.negative)
+        missing.pop('excessive_noise_bound')
+        with self.assertRaisesRegex(ValueError, 'negative-control status/reason mismatch'):
+            check.check_negative_controls(missing)
 
 
 if __name__ == '__main__':

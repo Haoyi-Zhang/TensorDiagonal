@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import csv
 import json
 import random
@@ -684,6 +685,107 @@ def check_decoding_records(payload, summary=None):
         require(all(summary.get(key) == value for key, value in expected.items()), 'decoding summary mismatch')
 
 
+def check_negative_controls(negative):
+    expected = {
+        'distance_two_budget_one': {'status': 'no_certificate', 'reason': 'singular_restricted_system'},
+        'excessive_noise_bound': {'status': 'no_certificate', 'reason': 'noise_exceeds_certified_margin'},
+    }
+    require(negative == expected, 'negative-control status/reason mismatch')
+    # Check the refusal premises from independent equations, not saved flags.
+    h = off_diagonal_tensor(independent_distance_tensor(2, 2))
+    rows = [row for row, _ in independent_rows(h)]
+    # Candidate support {0} and true support {1} leave no diagonal rows.
+    require(_rank(rows) < 2, 'distance-two control has no singular restriction')
+    h = off_diagonal_tensor(independent_distance_tensor(3, 3))
+    rows = [row for row, _ in independent_rows(h)]
+    rows += [[Q(i == j) for i in range(3)] for j in (1, 2)]
+    require(_rank(rows) == 3, 'excessive-noise control unexpectedly singular')
+    # For true/candidate support {0}, beta^2 is at most trace(M)/n.
+    # Thus even the exact margin is below the declared delta=100.
+    require(sum((value * value for row in rows for value in row), Q(0)) < 3 * 100**2,
+            'excessive-noise control does not exceed the restricted margin')
+
+
+def check_mutation_records(records, posterior, summary=None):
+    expected = {
+        'altered-particular', 'truncated-direction', 'false-full-rank',
+        'invalid-equation', 'invalid-rational', 'false-inconsistency-sum',
+        'altered-inverse', 'omitted-support', 'inflated-margin', 'negative-noise',
+    }
+    require(isinstance(records, list) and len(records) == len(expected), 'mutation record count')
+    names = [record.get('case') for record in records]
+    require(all(isinstance(name, str) for name in names)
+            and len(set(names)) == len(names) and set(names) == expected,
+            'mutation case set mismatch')
+    require(all(record.get('rejected') is True for record in records), 'mutation rejection flags')
+    if summary is not None:
+        require(all(summary.get(key) == value for key, value in
+                    {'instances': 10, 'rejected': 10, 'failures': 0}.items()), 'mutation summary mismatch')
+
+    # Reconstruct small valid fixtures without the production constructors or
+    # solvers. The saved format contains names/flags, not altered certificates;
+    # these replays independently exercise the ten named rejection operations.
+    h = off_diagonal_tensor(independent_distance_tensor(3, 3))
+    x, rank = independent_particular(h)
+    free, component_rank = independent_free_components(h)
+    require(rank == component_rank == 2, 'mutation fixture rank')
+    keys = [(i, j, p, q) for i, j in combinations(range(3), 2)
+            for p, q in combinations(range(3), 2)]
+    pivots, rows = [], []
+    for key in keys:
+        row, _ = _row(h, key)
+        if _rank(rows + [row]) > len(rows):
+            rows.append(row)
+            pivots.append(list(key))
+    columns = next(cols for cols in combinations(range(3), rank)
+                   if _rank([[row[c] for c in cols] for row in rows]) == rank)
+    instance = {'n': 3, 'orbits': tensor_orbits(h)}
+    cert = {'status': 'ambiguous', 'particular': list(map(str, x)),
+            'null_basis': [list(map(str, component['direction'])) for component in free],
+            'rank': rank, 'pivot_equations': pivots, 'pivot_columns': list(columns)}
+    require(verify(instance, cert), 'invalid independent mutation base')
+
+    altered = copy.deepcopy(cert)
+    altered['particular'][0] = str(Q(altered['particular'][0]) + 1)
+    require(not verify(instance, altered), 'altered-particular accepted')
+    altered = copy.deepcopy(cert)
+    altered['null_basis'][0][0] = '0'
+    require(not verify(instance, altered), 'truncated-direction accepted')
+    altered = copy.deepcopy(cert)
+    altered['rank'] = 3
+    require(not verify(instance, altered), 'false-full-rank accepted')
+    altered = copy.deepcopy(cert)
+    altered['pivot_equations'][0] = [0, 0, 0, 0]
+    require(not verify(instance, altered), 'invalid-equation accepted')
+    altered = copy.deepcopy(cert)
+    altered['particular'][0] = '1/0'
+    require(not verify(instance, altered), 'invalid-rational accepted')
+
+    inconsistent = zero_tensor(3)
+    for i, j, k in permutations(range(3)):
+        inconsistent[i][j][k] = Q(1)
+    bad_instance = {'n': 3, 'orbits': tensor_orbits(inconsistent)}
+    witness = {'status': 'inconsistent', 'witness': [[[0, 1, 0, 1], '1']], 'nonzero_rhs': '1'}
+    require(verify(bad_instance, witness), 'invalid independent inconsistency base')
+    witness['nonzero_rhs'] = '0'
+    require(not verify(bad_instance, witness), 'false-inconsistency-sum accepted')
+
+    require(verify_stability(posterior), 'invalid posterior mutation base')
+    altered = copy.deepcopy(posterior)
+    inv = altered['inverse_witnesses'][0]['inverse'][0]
+    inv[0] = str(Q(inv[0]) + 1)
+    require(not verify_stability(altered), 'altered-inverse accepted')
+    altered = copy.deepcopy(posterior)
+    altered['inverse_witnesses'].pop()
+    require(not verify_stability(altered), 'omitted-support accepted')
+    altered = copy.deepcopy(posterior)
+    altered['gamma'] = '100'
+    require(not verify_stability(altered), 'inflated-margin accepted')
+    altered = copy.deepcopy(posterior)
+    altered['delta'] = '-1'
+    require(not verify_stability(altered), 'negative-noise accepted')
+
+
 def check(results):
     check_declared_design(load(ROOT / 'inputs' / 'design.json'))
     counts = Counter()
@@ -758,15 +860,16 @@ def check(results):
     with (results / 'noise.csv').open(newline='') as handle:
         csv_rows = list(csv.DictReader(handle))
     check_noise_records(noise, csv_rows, load(results / 'noise-summary.json'))
+    posterior_mutation_base = next(record['certificate'] for record in noise
+                                   if record['case'] == 'noise-3-1-10-1')
     del noise, csv_rows
 
     check_decoding_records(load(results / 'decoding.json'), load(results / 'decoding-summary.json'))
 
     negative = load(results / 'negative-controls.json')
-    require(negative['distance_two_budget_one']['reason'] == 'singular_restricted_system', 'singular control')
-    require(negative['excessive_noise_bound']['reason'] == 'noise_exceeds_certified_margin', 'noise-margin control')
+    check_negative_controls(negative)
     mutation = load(results / 'mutations.json')
-    require(len(mutation) == 10 and all(record['rejected'] for record in mutation), 'mutation records')
+    check_mutation_records(mutation, posterior_mutation_base, load(results / 'mutations-summary.json'))
     for suite in ('exhaustive', 'structured', 'decoding', 'noise', 'mutations'):
         require(load(results / (suite + '-summary.json'))['failures'] == 0, 'reported failure')
     return {

@@ -1,0 +1,73 @@
+name: Scientific checks
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  finite-science:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Bounded finite reproduction and fail-closed gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p ci-output
+          ulimit -v 2097152
+          ulimit -t 600
+          timeout --signal=TERM --kill-after=10s 600s bash -euo pipefail <<'SCIENTIFIC' 2>&1 | tee ci-output/run.log
+          python -B -S -m unittest discover -s tests -v 2>&1 | tee ci-output/tests.log
+          python -B -S run.py --suite all --out ci-output/results 2>&1 | tee ci-output/campaign.log
+          python -B -S check.py --results ci-output/results 2>&1 | tee ci-output/checker.log
+          python -B -S export_figures.py --results ci-output/results --out ci-output/results/plot-data 2>&1 | tee ci-output/figures.log
+          python -B -S - <<'PY' 2>&1 | tee ci-output/comparison.log
+          import json
+          from pathlib import Path
+          saved, fresh = Path('results'), Path('ci-output/results')
+          telemetry = {'cpu_seconds', 'wall_seconds', 'peak_rss_kib'}
+          compared = []
+          for old in sorted(saved.rglob('*')):
+              if not old.is_file() or old.name == 'reproduction.json':
+                  continue
+              relative = old.relative_to(saved)
+              new = fresh / relative
+              if old.suffix == '.json':
+                  left, right = json.loads(old.read_text()), json.loads(new.read_text())
+                  if old.name.endswith('-summary.json'):
+                      left = {k: v for k, v in left.items() if k not in telemetry}
+                      right = {k: v for k, v in right.items() if k not in telemetry}
+                  if left != right:
+                      raise ValueError('deterministic JSON differs: ' + str(relative))
+              elif old.suffix == '.jsonl':
+                  with old.open() as a, new.open() as b:
+                      from itertools import zip_longest
+                      for line, (x, y) in enumerate(zip_longest(a, b), 1):
+                          if x is None or y is None or json.loads(x) != json.loads(y):
+                              raise ValueError(f'{relative}: row {line} differs')
+              elif old.read_text() != new.read_text():
+                  raise ValueError('deterministic text differs: ' + str(relative))
+              compared.append(str(relative))
+          print(json.dumps({'compared_files': compared, 'count': len(compared),
+                            'scope': 'finite outputs; historical resource telemetry excluded'}))
+          PY
+          SCIENTIFIC
+      - name: Upload raw scientific output even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: scientific-output
+          path: ci-output/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 14
