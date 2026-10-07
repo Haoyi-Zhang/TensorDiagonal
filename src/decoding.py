@@ -28,8 +28,9 @@ def decode_diagonal(h, observed_diagonal):
                            'modes':[str(a)for a in modes],'maximum_multiplicity':largest})
     estimate=x[:]
     for component in components:
-        alpha=Q(component['modes'][0]);z=list(map(Q,component['direction']))
-        estimate=[a+alpha*b for a,b in zip(estimate,z)]
+        alpha=Q(component['modes'][0])
+        for i in component['vertices']:
+            estimate[i]+=alpha*Q(component['direction'][i])
     # Compact list-size generating polynomial, indexed by extra disagreement.
     polynomial=[1]
     for component in components:
