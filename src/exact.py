@@ -175,11 +175,14 @@ def rotate_tensor(t: Tensor, rotation: list[list[Q]]) -> Tensor:
     return [[[sum((r[k][p]*b[i][j][p]for p in range(n)),Q(0))for k in range(n)]for j in range(n)]for i in range(n)]
 
 def distance_family(n:int,m:int,parameter:Q=Q(1)) -> Tensor:
-    """Full-rank n-dimensional examples with a one-dimensional fiber of distance m.
+    """n-dimensional examples with a one-dimensional fiber of distance m.
 
 For m<n a scalar-identity anchor makes the full odeco rank equal to n. A
 rational rotation of the anchored complement pins every complementary
-coordinate. This is a constructive sharpness example, not a sampled workload.
+coordinate, including at parameter zero. For m=n the unanchored Cauchy member
+has rank n for nonzero parameter and n-1 at zero. The default parameter one
+therefore gives full rank in both branches. This is a constructive sharpness
+example, not a sampled workload.
 """
     if not 1<=m<=n<=16:raise ValueError('require 1<=m<=n<=16')
     if m==n:return cauchy_family([Q(i)for i in range(n)],[Q(1)]*n,parameter)
