@@ -1,0 +1,2 @@
+# Optional scripts/plot_retained.py only; scientific checks use the standard library.
+reportlab

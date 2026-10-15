@@ -34,20 +34,39 @@ The saved-control path requires the exact ten unique mutation names, literal Boo
 | Pointwise decoding | 270 words, 1,566 budget comparisons, one normalization counterexample |
 | Noisy certification | 36 accepted conditional bounds, two informative refusals; identical candidates and radii across four gross amplitudes within each fixed noise configuration |
 | Certificate mutations | Ten rejected alterations |
-| Boundary and adversarial unit tests | Twenty-nine current tests, including three portable support-reconstruction tests plus proof-critical regressions and saved-result rejection tests for false component distance, mismatched truth/input orbits, duplicate or missing noise keys, mislabeled noise configurations, altered observations, swapped case labels, altered budget counts, missing or duplicated mutation names, non-Boolean rejection flags, mismatched mutation summaries, and altered negative-control status or reasons |
+| Boundary and adversarial unit tests | Twenty-nine scientific tests plus three reference-identity checks (32 methods in the current test discovery), including three portable support-reconstruction tests plus proof-critical regressions and saved-result rejection tests for false component distance, mismatched truth/input orbits, duplicate or missing noise keys, mislabeled noise configurations, altered observations, swapped case labels, altered budget counts, missing or duplicated mutation names, non-Boolean rejection flags, mismatched mutation summaries, and altered negative-control status or reasons |
 
 
 The saved-result regression subset can be run directly:
 
 ```sh
-PYTHONDONTWRITEBYTECODE=1 python -m unittest tests.test_saved_results -v
+python -B -S -m unittest discover -s tests -p test_saved_results.py -v
 ```
 
 The current subset contains five test methods. They accept the unmodified 94 structured records, 36 noise records, 270 decoding records, ten mutation records and two negative controls, then reject the specified alterations. The original generation oracle in `run.py` remains part of the campaign; this regression subset checks the separately implemented saved-record path.
 
 The modal decoder reconstructs its estimate only on each free component's listed support, preserving the full dense directions and certificate schema. Disjoint supports make this the same exact completion as the dense coordinate sum; it avoids arithmetic on zero coordinates but does not change elimination, consistency, ratio normalization, modal ties or list formulas. No timing gain is claimed. The three tests in `tests/test_support_reconstruction.py` enumerate the two fixed fibers' 270 observations and 1,566 budgets, check direct commutators/dense reconstruction, and cover singleton, rigid, inconsistent and signed/rescaled cases. They are discovered by existing scientific CI. A portable standard-library-only subset is `python -B -m unittest discover -s tests -p test_support_reconstruction.py -v`; it requires no saved results or private paths. Retained historical counts/resources and scientific outputs are unchanged.
 
-The two three-dimensional enumeration families overlap; the dimension-four family is separate. The total is a number of tested records, not random samples or an empirical prevalence estimate. Raw tensor entries and certificates are retained in `results/`, including negative cases. Historical POSIX command measurements are recorded in `results/reproduction.json`; their test run covers 24 methods and predates the two additional saved-control regression methods and the three support-reconstruction methods. Those measurements do not describe the current 29-method suite. Wall/CPU times and peak resident memory are environment-specific observations, not stable outputs or speed claims. Scientific JSON and rational CSV values are deterministic under the documented design. Byte-identical PDFs are not promised because typesetting metadata can change.
+The two three-dimensional enumeration families overlap; the dimension-four family is separate. The total is a number of tested records, not random samples or an empirical prevalence estimate. Raw tensor entries and certificates are retained in `results/`, including negative cases. Historical POSIX command measurements are recorded in `results/reproduction.json`; their test run covers 24 methods and predates the two additional saved-control regression methods and the three support-reconstruction methods. Those measurements do not describe the current 32-method discovery (29 scientific methods and three reference-identity checks). Wall/CPU times and peak resident memory are environment-specific observations, not stable outputs or speed claims. Scientific JSON and rational CSV values are deterministic under the documented design. Byte-identical PDFs are not promised because typesetting metadata can change.
+
+The full campaign and saved-result checker use the POSIX `resource` module. To run only the portable algebra and decoder tests, including on Windows, use:
+
+```sh
+python -B -S -m unittest discover -s tests -p test_core.py -v
+python -B -S -m unittest discover -s tests -p test_support_reconstruction.py -v
+```
+
+## Optional retained-figure redraw
+
+`scripts/plot_retained.py` redraws the existing `results/plot-data/` without rerunning a scientific suite. This optional route additionally needs ReportLab and the Computer Modern Type 1 fonts `cmr10` and `cmmi10`; these are not scientific-code dependencies or bundled font binaries.
+
+```sh
+python -m pip install -r requirements-figures.txt
+python scripts/plot_retained.py --input-dir results/plot-data --output-dir /tmp/tensor-diagonal-figures
+python -B -S -m unittest discover -s scripts -p test_plot_sources.py -v
+```
+
+By default font lookup uses `kpsewhich` from a TeX installation. To avoid that lookup, supply both `--font-afm-dir /path/to/afm` and `--font-pfb-dir /path/to/pfb`. The output directory must be separate from the inputs, retained results and neighboring paper. No TeX compilation is required for this redraw.
 
 The scientific workflow in `.github/workflows/scientific-checks.yml` is configured for a flat artifact-repository root on Ubuntu 24.04. It runs the tests, regenerates all five finite suites, independently checks the new results, exports the plots, and compares deterministic outputs with the retained records. It bounds the complete calculation and uploads raw output even after a failed gate. A configured workflow is not evidence that a hosted run has completed.
 
