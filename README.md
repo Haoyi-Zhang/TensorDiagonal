@@ -58,6 +58,12 @@ python -B -S -m unittest discover -s tests -p test_support_reconstruction.py -v
 
 ## Optional retained-figure redraw
 
+The component/pinning relationship diagram is rendered directly by
+`python -B figures/draw_schematics.py` with the optional Matplotlib dependency.
+It writes `figures/component-structure.pdf`; `--paper-dir PATH` also updates a
+complete manuscript's figure directory. No tensor experiment or TeX subprocess
+is executed by this renderer.
+
 `scripts/plot_retained.py` redraws the existing `results/plot-data/` without rerunning a scientific suite. This optional route additionally needs ReportLab and the Computer Modern Type 1 fonts `cmr10` and `cmmi10`; these are not scientific-code dependencies or bundled font binaries.
 
 ```sh

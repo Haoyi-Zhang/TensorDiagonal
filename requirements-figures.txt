@@ -1,2 +1,3 @@
-# Optional scripts/plot_retained.py only; scientific checks use the standard library.
+# Optional vector renderers; scientific checks use the standard library.
 reportlab
+matplotlib>=3.6
