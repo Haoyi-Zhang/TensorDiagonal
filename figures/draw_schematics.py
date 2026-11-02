@@ -102,8 +102,11 @@ def main():
         d.text(offset+.08,.35,"1",size=9)
         d.text(offset+2.02,.35,"1",size=9)
     d.box("pin",9.3,.45,.6,.6,"4",size=9)
-    d.arrow(d.point("b2","e"),d.point("pin","w"),dashed=True)
-    d.arrow(d.point("b3","e"),d.point("pin","w"),dashed=True)
+    # Separate incoming pin arrows so both arrowheads remain legible at the
+    # manuscript's physical scale. These are the same two one-sided entries.
+    px,py=d.point("pin","w")
+    d.arrow(d.point("b2","e"),(px,py+.14),dashed=True)
+    d.arrow(d.point("b3","e"),(px,py-.14),dashed=True)
     d.arrow(d.point("b1","n"),d.point("pin","n"),dashed=True,
             via=((5.2,1.9),(9.3,1.9)))
     # Distinguish one-sided pin information from solid reciprocal-gain edges.

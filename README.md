@@ -85,7 +85,7 @@ An input stores an integer `n` and a list of `orbits`, in lexicographic order of
 
 ## Standalone proof supplement
 
-The general proofs and worked examples are under `proofs/`; all their inputs and references are local. They contain the same scientific arguments as the article, with independent section numbering. To typeset the supplement, use a standard LaTeX installation with the supplied JMLR style and its ordinary dependencies, TikZ and PGFPlots:
+The general proofs and worked examples are under `proofs/`; all their inputs and references are local. They contain the same scientific arguments as the article, with independent section numbering. The supplement and article consume the same Python-rendered component diagram in `figures/component-structure.pdf`. To typeset the supplement, use a standard LaTeX installation with the supplied JMLR style and its ordinary dependencies:
 
 ```sh
 cd proofs
