@@ -99,9 +99,12 @@ Suppose the exact mixed entries are known and one component parameter is estimat
 \end{equation}
 Among single-coordinate queries with the same error bound, this worst-case bound is minimized by choosing a coordinate of maximum $|(z_C)_i|$.
 \end{proposition}
+\begin{samepage}
 \begin{proof}
 The parameter is obtained by subtracting $x_i^0$ from the query and dividing by $(z_C)_i$. Its error is at most $\eta/|(z_C)_i|$. Multiplication by the entire component vector gives~\eqref{eq:query-error}. Equality is attained when the query error has magnitude $\eta$, so maximizing the denominator minimizes the worst case.
 \end{proof}
+\par
+\end{samepage}
 
 \begin{proposition}[Costed and repeated coordinate queries]\label{prop:query-cost}
 Give coordinate $i$ a nonnegative trust cost $c_i$. The minimum cost for unique completion is
@@ -132,9 +135,12 @@ These query statements separate graph support from conditioning. Two fibers may 
 \begin{proposition}[Mask-preserving orthogonal maps]\label{prop:mask-symmetry}
 An orthogonal matrix $U$ maps the coordinate-diagonal tensor subspace $\{D(x):x\in\R^n\}$ onto itself under the same change of basis in all three modes if and only if $U$ is a signed permutation matrix.
 \end{proposition}
+\begin{samepage}
 \begin{proof}
 A signed permutation clearly permutes the coordinate cubes, with possible signs. Conversely, suppose the diagonal subspace is preserved. The image of each basis cube $e_i^{\otimes3}$ is $v_i^{\otimes3}$, where $v_i$ is the corresponding unit column of the transformation (or its transpose, depending on the coordinate convention). If $v_i$ had two nonzero coordinates, say $v_{pi}$ and $v_{qi}$ with $p\ne q$, its mixed entry $(p,p,q)$ would be $v_{pi}^2v_{qi}\ne0$, contradicting membership in the diagonal subspace. Thus every column has one nonzero entry, of magnitude one. Orthogonality places these entries in different rows, proving that the matrix is a signed permutation.
 \end{proof}
+\par
+\end{samepage}
 
 The proposition concerns preservation of the entire nuisance subspace, not accidental cancellation for one particular noise vector. A special noise realization can transform to a diagonal tensor under a larger class of transformations, but that does not justify a guarantee uniform over all diagonal corruptions. This provides a precise reason that arbitrary whitening cannot simply be inserted before the completion method.
 
